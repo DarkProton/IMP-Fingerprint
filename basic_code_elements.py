@@ -29,10 +29,14 @@ def show_pic(image, plot_name, colourmap=None):
 ## Uses zeros from numpy
 def pnd(image):
     """Returns the point normal determination"""
+    # Get image dimensions
     y_pix = len(image)
     x_pix = len(image[0])
+
+    # make array to hold normals
     normals = zeros((y_pix-1, x_pix-1))
 
+    # Loop through and calculate the normal vector
     for n in range(1, y_pix):
         for m in range(1, x_pix):
             n1 = (-image[n,m] + image[n-1,m] + image[n-1,m-1] - image[n,m-1])/4
