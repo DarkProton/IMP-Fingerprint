@@ -1,0 +1,66 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[parfill]{parskip}
+\usepackage{subfig}
+\usepackage{amsmath}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage[bibstyle=numeric, citestyle=numeric-comp]{biblatex}
+\usepackage{multicol}
+\usepackage{letltxmacro}
+
+%\addbibresource[location=remote]{C:/Users/CptProton/Documents/Bibliographies/Labs.bib}
+
+\LetLtxMacro{\oldsqrt}{\sqrt} % makes all sqrts closed
+\renewcommand{\sqrt}[1][]{%
+  \def\DHLindex{#1}\mathpalette\DHLhksqrt}
+\def\DHLhksqrt#1#2{%
+  \setbox0=\hbox{$#1\oldsqrt[\DHLindex]{#2\,}$}\dimen0=\ht0
+  \advance\dimen0-0.2\ht0
+  \setbox2=\hbox{\vrule height\ht0 depth -\dimen0}%
+  {\box0\lower0.71pt\box2}}
+
+\makeatletter
+\newenvironment{tablehere}
+  {\def\@captype{table}}
+  {}
+
+\newenvironment{figurehere}
+  {\def\@captype{figure}}
+  {}
+\makeatother
+
+\title{Automatic Fingerprint Recognition}
+\author{Benjamin May \& Ed Wastell}
+%\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Stuff happened.
+\end{abstract}
+
+\begin{multicols}{2}
+
+\section{Theory}
+
+%\begin{figure*}
+%\centering
+%\includegraphics[width = 0.75\textwidth]{Stuff1}  %Here 'Stuff1' is the name of the graphics file, no extension no spaces. Can be PNG, JPEG, PDF or GIF.
+%\caption{The stuff happening.}
+%\label{fig:example}
+%\end{figure}
+
+\section{Experimental Procedure}
+
+\section{Results \& Analysis}
+
+\section{Conclusion}
+
+
+\printbibliography
+
+\end{multicols}
+
+\end{document}
