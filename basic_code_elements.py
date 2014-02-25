@@ -33,7 +33,7 @@ def pnd(image):
     y_pix = len(image)
     x_pix = len(image[0])
 
-    # make array to hold normals
+    # Make array to hold normals
     normals = zeros((y_pix-1, x_pix-1))
 
     # Loop through and calculate the normal vector
@@ -45,3 +45,39 @@ def pnd(image):
             normals[n-1, m-1] = [n1, n2]
 
     return normals
+
+## Uses zeros, sum, sqrt from numpy
+def atd(image, window=8):
+    """Returns the averaged tangent diraction of a normal array"""
+    # Get image dimensions
+    y_pix = len(image)
+    x_pix = len(image[0])
+
+    # Calculate window half-size
+    k1 = int(window/2)
+    if k1 == window/2:
+        k2 = int(window/2) - 1
+    else:
+        k2 = k1
+
+    # Make array to hold tangents
+    tangents = zeros((y_pix-1, x_pix-1))
+
+    # Loop through and calculate the normal vector
+    for n in range(0, y_pix):
+        for m in range(0, x_pix):
+            # Extract window from image
+            window = image[n-k1:n+k2, m-k1:m+k2]
+
+            # Calculate normalised ATD
+            A = sum(window[:,:,0]**2)
+            B = sum(window[:,:,1]**2)
+            C = sum(window[:,:,0]*window[:,:,1])
+
+            D = (B - A)/(2*C) - sqrt(((B - S)/(2*C))**2 + 1)
+            u1 = sqrt(1/(1 + D**2))
+            u2 = u1*D
+
+            tangents[n,m] = [u1, u2]
+
+    return tangents
