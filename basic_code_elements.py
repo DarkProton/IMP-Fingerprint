@@ -48,15 +48,16 @@ def save_pic(image, plot_name, colourmap=None):
     savefig("{:s}.pdf".format(plot_name).replace(' ', '_'))
     close()
 
-## Uses zeros from numpy
+## Uses zeros and array from numpy
 def pnd(image):
     """Returns the point normal determination"""
+    from numpy import zeros,array
     # Get image dimensions
     y_pix = len(image)
     x_pix = len(image[0])
 
     # Make array to hold normals
-    normals = zeros((y_pix-1, x_pix-1))
+    normals = zeros((y_pix-1, x_pix-1,2))
 
     # Loop through and calculate the normal vector
     for n in range(1, y_pix):
@@ -64,12 +65,13 @@ def pnd(image):
             n1 = (-image[n,m] + image[n-1,m] + image[n-1,m-1] - image[n,m-1])/4
             n2 = (-image[n,m] - image[n-1,m] + image[n-1,m-1] + image[n,m-1])/4
 
-            normals[n-1, m-1] = [n1, n2]
+            normals[n-1 ,  m-1] = array([n1, n2])
 
     return normals
 
 ## Uses zeros, sum, sqrt from numpy
 def atd(image, window=9):
+    from numpy import zeros, sum, sqrt
     """Returns the averaged tangent diraction of a normal array"""
     # Get image dimensions
     y_pix = len(image)
