@@ -4,7 +4,8 @@
 
 ## Uses axes, imshow, colorbar, title, savefig, close, figure
 ## from matplotlib.pyplot
-from matplotlib.pyplot import axes,imshow,colorbar,title,savefig,close,figure
+from matplotlib.pyplot import axes, imshow, colorbar, title, \
+     savefig, close, figure
 def show_pic(image,plot_name='Test Image',colourmap=None):
     """Method to simply shwo the image. Useful for tests"""
     figure(facecolor='white', figsize=(5,4))
@@ -62,10 +63,12 @@ def pnd(image):
     # Loop through and calculate the normal vector
     for n in range(1, y_pix):
         for m in range(1, x_pix):
-            n1 = (-image[n,m] + image[n-1,m] + image[n-1,m-1] - image[n,m-1])/4
-            n2 = (-image[n,m] - image[n-1,m] + image[n-1,m-1] + image[n,m-1])/4
+            n1 = (-image[n,m] + image[n-1,m] + image[n-1,m-1] \
+                  - image[n,m-1])/4
+            n2 = (-image[n,m] - image[n-1,m] + image[n-1,m-1] \
+                  + image[n,m-1])/4
 
-            normals[n-1 ,  m-1] = array([n1, n2])
+            normals[n-1,  m-1] = array([n1, n2])
 
     return normals
 
