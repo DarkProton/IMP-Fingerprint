@@ -47,7 +47,7 @@ def pnd(image):
     return normals
 
 ## Uses zeros, sum, sqrt from numpy
-def atd(image, window=8):
+def atd(image, window=9):
     """Returns the averaged tangent diraction of a normal array"""
     # Get image dimensions
     y_pix = len(image)
