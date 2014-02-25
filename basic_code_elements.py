@@ -5,7 +5,7 @@
 ## Uses axes, imshow, colorbar, title, savefig, close, figure
 ## from matplotlib.pyplot
 from matplotlib.pyplot import axes,imshow,colorbar,title,savefig,close,figure
-def show_pic(image):
+def show_pic(image,plot_name='Test Image',colourmap=None):
     """Method to simply shwo the image. Useful for tests"""
     figure(facecolor='white', figsize=(5,4))
 
