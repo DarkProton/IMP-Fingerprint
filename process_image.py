@@ -12,4 +12,3 @@ a = basic.atd(img)
 basic.save_pic(a[:,:,0], 'ATD_u1', colourmap='gray')
 basic.save_pic(a[:,:,1], 'ATD_u2', colourmap='gray')
 plt.show()
-
