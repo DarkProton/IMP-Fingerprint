@@ -7,8 +7,8 @@ import matplotlib.pyplot as plt
 
 img = misc.imread('Images/Example_curve_n0.png')
 
-a = basic.pnd(img)
+a = basic.atd(img)
 
-basic.save_pic(a[:,:,0], 'ATD_n1', colourmap='gray')
-basic.save_pic(a[:,:,1], 'ATD_n2', colourmap='gray')
+basic.save_pic(a[:,:,0], 'ATD_u1', colourmap='jet')
+basic.save_pic(a[:,:,1], 'ATD_u2', colourmap='jet')
 plt.show()

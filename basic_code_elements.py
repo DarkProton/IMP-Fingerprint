@@ -59,7 +59,11 @@ def normalise(array):
         for m in range(xl):
             y = array[n,m,0]
             x = array[n,m,1]
-            array[n,m,:] = array[n,m,:]*(x**2 + y**2)**(-0.5)
+
+            if x == 0 and y == 0:
+                array[n,m,:] = 0 , 0
+            else:
+                array[n,m,:] = array[n,m,:]*(x**2 + y**2)**(-0.5)
 
     return array
 
@@ -83,6 +87,8 @@ def pnd(image):
                   + image[n, m-1])/4
 
             normals[n-1, m-1, :] = n1, n2
+
+    normals = normalise(normals)
 
     return normals
 
