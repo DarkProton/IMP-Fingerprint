@@ -90,30 +90,49 @@ def atd(image, window=9):
     # Make array to hold tangents
     tangents = zeros((y_pix-1, x_pix-1,2))
 
+    # Calcualte normals
     normals = pnd(image)
 
-    inImageTest = lambda ky,kx : not ( (ky < 0) and (kx < 0) and (ky > y_pix - 5) and (kx > x_pix - 5) )
+    # Test to see if a pixel is in the image
+    inImageTest = lambda ky,kx : not ((ky < 0) and (kx < 0) and \
+                                      (ky > y_pix - k1 - 1) and \
+                                      (kx > x_pix - k1 - 1))
 
+    # Loop through and calculate ATD
     for n in range(1,y_pix-(k1+1)):
-            print(n)
-            for m in range(1,x_pix-(k1+1)):
-                    v = [ normals[ky,kx] for ky in range(n-3,n+4) for kx in range(m-3,m+4) if inImageTest(ky,kx)]
-                    A = sum( V[0]*V[0] for V in v)
-                    B = sum( V[1]*V[1] for V in v)
-                    C = sum( V[0]*V[1] for V in v)
-                    if C == 0:
-                            if A < B:
-                                    u1 = 1
-                                    u2 = 0
-                            else:
-                                    u1 = 0
-                                    u2 = 1
-                    else:
-                        D = (B - A)/(2*C) - sqrt( 1 + ( (B - A) / (2 * C) ) ** 2) 
+        for m in range(1,x_pix-(k1+1)):
+            # Extract window from image
+            window =[normals[ky,kx] for ky in range(n-k1,n+k2) \
+                     for kx in range(m-k1,m+k2) if inImageTest(ky,kx)]
 
-                        u1 = (1 + D**2) ** (-0.5)
-                        u2 = u1 * D
-                    tangents[n,m,0] = u1
-                    tangents[n,m,1] = u2
+            # Make window a numpy array for easier indexing
+            window = array(window)
+
+            # Calculate normalised ATD
+            A = sum(window[:,0]**2)
+            B = sum(window[:,1]**2)
+            C = sum(window[:,0]*window[:,1])
+
+            # Diagonal matrix case
+            if C == 0 and A < B:
+                u1 = 1
+                u2 = 0
+
+            elif C == 0 and A > B:
+                u1 = 0
+                u2 = 1
+
+            # Plateau
+            elif A == B:
+                u1 = 0
+                u2 = 0
+
+            # Non-diagonal case
+            else:
+                D = (B - A)/(2*C) - sqrt(1 + ((B - A)/(2*C))**2) 
+                u1 = 1/sqrt(1 + D**2)
+                u2 = u1*D
+
+            tangents[n,m,:] = u1, u2
 
     return tangents
