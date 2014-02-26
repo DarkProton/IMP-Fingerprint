@@ -49,6 +49,20 @@ def save_pic(image, plot_name, colourmap=None):
     savefig("{:s}.pdf".format(plot_name).replace(' ', '_'))
     close()
 
+## Uses sqrt, sum
+def normalise(array):
+    """Normalises a 3D array"""
+    from numpy import sqrt
+    yl = len(array)
+    xl = len(array[0])
+    for n in range(yl):
+        for m in range(xl):
+            y = array[n,m,0]
+            x = array[n,m,1]
+            array[n,m,:] = array[n,m,:]*(x**2 + y**2)**(-0.5)
+
+    return array
+
 ## Uses zeros and array from numpy
 def pnd(image):
     """Returns the point normal determination"""
@@ -74,8 +88,8 @@ def pnd(image):
 
 ## Uses zeros, sum, sqrt from numpy
 def atd(image, window=9):
-    from numpy import zeros, sum, sqrt, array
     """Returns the averaged tangent diraction of a normal array"""
+    from numpy import zeros, sum, sqrt, array
     # Get image dimensions
     y_pix = len(image)
     x_pix = len(image[0])
