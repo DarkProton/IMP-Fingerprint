@@ -156,3 +156,6 @@ def atd(image, window=9):
             tangents[n,m,:] = u1, u2
 
     return tangents
+
+def travers(img,tangents):
+        print (2)
