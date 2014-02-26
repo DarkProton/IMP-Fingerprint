@@ -83,6 +83,7 @@ def pnd(image):
         for m in range(1, x_pix):
             n1 = (-image[n, m] + image[n-1, m] + image[n-1, m-1] \
                   - image[n, m-1])/4
+            print (n1)
             n2 = (-image[n, m] - image[n-1, m] + image[n-1, m-1] \
                   + image[n, m-1])/4
 
