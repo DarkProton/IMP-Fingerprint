@@ -5,13 +5,11 @@ from scipy import misc
 import numpy as np
 import matplotlib.pyplot as plt
 
-def main():
-        img = misc.imread('Images/Example_curve_n0.png').astype(np.float)
+img = misc.imread('Images/Example_curve_n0.png')
 
-        a = basic.atd(img)
+a = basic.atd(img)
 
-        #basic.show_pic(img,colourmap=plt.get_cmap('gray'))
-
-if __name__ == "__main__":
-        main()
+basic.save_pic(a[:,:,0], 'ATD_u1', colourmap='gray')
+basic.save_pic(a[:,:,1], 'ATD_u2', colourmap='gray')
+plt.show()
 
