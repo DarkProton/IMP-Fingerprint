@@ -8,13 +8,9 @@ import time
 
 def main():
         img = misc.imread('Images/Example_curve_n0.png').astype(float)
-        basic.travers(img,2)
-        return
 
-        a = basic.atd(img)
-
-        plt.quiver(a[:,:,0],a[:,:,1])
-        plt.show()
-
+        directionTangents  = basic.atd(img)
+        a = basic.travers(img,basic.atd(img))
+        print (a)
 if __name__ == '__main__':
         main()

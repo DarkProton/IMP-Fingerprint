@@ -157,5 +157,17 @@ def atd(image, window=9):
 
     return tangents
 
-def travers(img,tangents):
-        print (2)
+
+def travers(img,tangents,mu=5):
+        """Traverses the image for riges"""
+
+        done = []
+        currentPixelX = 0
+        currentPixelY = 0
+        currentDir = tangents[currentPixelX,currentPixelY]
+        while not (currentPixelX,currentPixelY) in done:
+                done.append( (currentPixelX,currentPixelY) )
+                currentPixelX += currentDir[0] * mu
+                currentPixelY += currentDir[1] * mu
+                currentDir = tangents[currentPixelX,currentPixelY]
+
