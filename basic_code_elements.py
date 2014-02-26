@@ -50,6 +50,8 @@ def save_pic(image, plot_name, colourmap=None):
     savefig("{:s}.pdf".format(plot_name).replace(' ', '_'))
     close()
 
+## Normalise an array of vectors
+
 ## Uses zeros and array from numpy
 def pnd(image):
     """Returns the point normal determination"""
@@ -94,17 +96,25 @@ def atd(image, window=9):
     # Calcualte normals
     normals = pnd(image)
 
+    # Test to see if a pixel is in the image
+    inImageTest = lambda ky,kx : not ((ky < 0) and (kx < 0) and \
+                                      (ky > y_pix - k1 - 1) and \
+                                      (kx > x_pix - k1 - 1))
+
     # Loop through and calculate ATD
     for n in range(1,y_pix-(k1+1)):
-        print("Line:", n)
         for m in range(1,x_pix-(k1+1)):
             # Extract window from image
-            window = normals[n-k1:n+k2, m-k1:m+k2]
+            window =[normals[ky,kx] for ky in range(n-k1,n+k2) \
+                     for kx in range(m-k1,m+k2) if inImageTest(ky,kx)]
+
+            # Make window a numpy array for easier indexing
+            window = array(window)
 
             # Calculate normalised ATD
-            A = sum(window[:,:,0]**2)
-            B = sum(window[:,:,1]**2)
-            C = sum(window[:,:,0]*window[:,:,1])
+            A = sum(window[:,0]**2)
+            B = sum(window[:,1]**2)
+            C = sum(window[:,0]*window[:,1])
 
             # Diagonal matrix case
             if C == 0 and A < B:
@@ -115,12 +125,17 @@ def atd(image, window=9):
                 u1 = 0
                 u2 = 1
 
+            # Plateau
+            elif A == B:
+                u1 = 0
+                u2 = 0
+
             # Non-diagonal case
             else:
                 D = (B - A)/(2*C) - sqrt(1 + ((B - A)/(2*C))**2) 
                 u1 = 1/sqrt(1 + D**2)
                 u2 = u1*D
 
-            tangents[n,m,:] = array([u1,u2])
+            tangents[n,m,:] = u1, u2
 
     return tangents
