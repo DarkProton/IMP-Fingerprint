@@ -92,21 +92,15 @@ def atd(image, window=9):
 
     normals = pnd(image)
 
+    inImageTest = lambda ky,kx : not ( (ky < 0) and (kx < 0) and (ky > y_pix - 5) and (kx > x_pix - 5) )
+
     for n in range(1,y_pix-(k1+1)):
             print(n)
             for m in range(1,x_pix-(k1+1)):
-                    A = 0
-                    B = 0
-                    C = 0
-                    for ky in range(-3,4):
-                            for kx in range(-3,4):
-                                    if (n + ky) < 0 or (n + ky) > y_pix-5 or (m + kx) < 0 or (m + kx) > x_pix-5:
-                                            continue
-                                            #This will probably need to be changed.
-                                    v = normals[n + ky][m + kx]
-                                    A += v[0] ** 2
-                                    B += v[1] ** 2
-                                    C += v[0] * v[1]
+                    v = [ normals[ky,kx] for ky in range(n-3,n+4) for kx in range(m-3,m+4) if inImageTest(ky,kx)]
+                    A = sum( V[0]*V[0] for V in v)
+                    B = sum( V[1]*V[1] for V in v)
+                    C = sum( V[0]*V[1] for V in v)
                     if C == 0:
                             if A < B:
                                     u1 = 1
@@ -119,6 +113,7 @@ def atd(image, window=9):
 
                         u1 = (1 + D**2) ** (-0.5)
                         u2 = u1 * D
-                    tangents[n,m,:] = array([u1,u2])
+                    tangents[n,m,0] = u1
+                    tangents[n,m,1] = u2
 
     return tangents
