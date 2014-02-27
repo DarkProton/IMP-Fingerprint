@@ -122,8 +122,8 @@ def atd(image, window=9):
     for n in range(1,y_pix-(k1+1)):
         for m in range(1,x_pix-(k1+1)):
             # Extract window from image
-            window =[normals[ky,kx] for ky in range(n-k1,n+k2) \
-                     for kx in range(m-k1,m+k2) if inImageTest(ky,kx)]
+            window = [normals[ky,kx] for ky in range(n-k1,n+k2) \
+                      for kx in range(m-k1,m+k2) if inImageTest(ky,kx)]
 
             # Make window a numpy array for easier indexing
             window = array(window)
@@ -156,3 +156,35 @@ def atd(image, window=9):
             tangents[n,m,:] = u1, u2
 
     return tangents
+
+## Uses sum from numpy
+def OC1(window):
+    """Calculates the curvature point via method 1 - needs ADT results"""
+    from numpy import sum, arange, zeros
+    # Get the window size
+    yl = len(window)
+    xl = len(window)
+
+    # Calculate vector weighting parameter
+    r = [n*window[n,m,0] + m*window[n,m,1] for n in range(yl) \
+         for m in range(xl)]
+
+    # Calculate curvature paramaters
+    A = sum(window[:,:,0]**2)
+    B = sum(window[:,:,1]**2)
+    C = sum(window[:,:,0]*window[:,:,1])
+    D = sum(window[:,:,0]*r)
+    E = sum(window[:,:,1]*r)
+    M = sum(r**2)
+
+    # Straight line case
+    if A*B == C**2:
+        pc = inf, inf
+
+    # Curved line case
+    else:
+        x = (B*D - C*E)/(A*B - C**2)
+        y = (A*E  - C*D)/(A*B - C**2)
+        pc = x, y
+
+    return pc
