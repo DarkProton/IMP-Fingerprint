@@ -7,13 +7,20 @@ import matplotlib.pyplot as plt
 import time
 
 def main():
-        img = misc.imread('Images/Example_curve_n0.png').astype(float)
+        img = misc.imread('Images/arch.png').astype(float)
 
-        Tangents  = basic.atd(img)
-        print ('Got tangents')
+        xSize , ySize = np.shape(img)
 
-        a = basic.travers(img,Tangents)
-        plt.plot( [b[0] for b in a],[b[1] for b in a],'ro')
+        tangents = basic.atd(img)
+        placesWhereTheTangentIsNotZero = np.where( tangents[:,:,1] + tangents[:,:,0] != 0) 
+
+        tx = 98
+        ty = 152
+        rx, ry = basic.followRidge(tangents,tx,ty)
+        plt.imshow(img,interpolation='nearest',cmap=plt.get_cmap('gray'))
+
+        plt.plot([tx], [ty],'ro')
+        plt.plot(rx,ry,'bo')
         plt.show()
 if __name__ == '__main__':
         main()

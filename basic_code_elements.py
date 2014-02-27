@@ -166,32 +166,30 @@ def calAngle(y,x):
                 return pi/2
         else:
                 return arctan(y/x)
+def followRidge(tangents,cX,cY):
+        """Given an list of tangents and an input starting position, returns the list of points on a ridge"""
+        #cX and cY stand for current x and current Y
+        from numpy import shape,array,where
 
-def travers(img,tangents,mu=5,beta=0.5):
-        """Traverses the image for riges"""
-        #Note, 0.5 radians is approximatly equal to 30 degrees
-        import math
-        from numpy import shape,array,where,amax
+        mu = 5
+        beta = 0.5
 
         xSize,ySize,zSize  = shape(tangents)
 
-        done = []
-        useful = []
+        visited = array( [ [False] * ySize] * xSize )
+        visited[cX,cY] = True
+
         angels = array( [ [abs(calAngle(tangents[n,m,1],tangents[n,m,0]))\
-                        for m in range(0,ySize-1)] for n in range(0,xSize-1)])
+                for m in range(0,ySize-1)] for n in range(0,xSize-1)])
 
-        for currentPixelX in range(0,xSize-1):
-                for currentPixelY in range(0,ySize - 1):
-                        currentDir = tangents[currentPixelX,currentPixelY]
-                        while (not (currentPixelX,currentPixelY) in done)\
-                                        and (angels[currentPixelX,currentPixelY] < beta):
-                                currentPixelX += round(currentDir[0] * mu)
-                                currentPixelY += round(currentDir[1] * mu)
-                                currentDir = tangents[currentPixelX,currentPixelY]
-                                print (currentPixelX,currentPixelY)
-                                if (currentPixelX,currentPixelY) in done:
-                                        useful.append( (currentPixelX,currentPixelY) )
-                                else:
-                                        done.append( (currentPixelX,currentPixelY) )
-
-        return useful
+        while cX >= 0\
+                and cY >= 0\
+                and cX < xSize\
+                and cY < ySize:
+                        cX += round(tangents[cX,cY,0] * mu)
+                        cY += round(tangents[cX,cY,1] * mu)
+                        if visited[cX,cY]:
+                                break
+                        visited[cX,cY] = True
+        usefulCords = where(visited==True)
+        return usefulCords
