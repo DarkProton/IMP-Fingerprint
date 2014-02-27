@@ -9,8 +9,11 @@ import time
 def main():
         img = misc.imread('Images/Example_curve_n0.png').astype(float)
 
-        directionTangents  = basic.atd(img)
-        a = basic.travers(img,basic.atd(img))
-        print (a)
+        Tangents  = basic.atd(img)
+        print ('Got tangents')
+
+        a = basic.travers(img,Tangents)
+        plt.plot( [b[0] for b in a],[b[1] for b in a],'ro')
+        plt.show()
 if __name__ == '__main__':
         main()

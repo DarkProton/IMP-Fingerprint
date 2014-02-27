@@ -158,16 +158,40 @@ def atd(image, window=9):
     return tangents
 
 
-def travers(img,tangents,mu=5):
+def calAngle(y,x):
+        from numpy import arctan,pi
+        if x == 0 and y == 0:
+                return 0
+        elif x == 0:
+                return pi/2
+        else:
+                return arctan(y/x)
+
+def travers(img,tangents,mu=5,beta=0.5):
         """Traverses the image for riges"""
+        #Note, 0.5 radians is approximatly equal to 30 degrees
+        import math
+        from numpy import shape,array,where,amax
+
+        xSize,ySize,zSize  = shape(tangents)
 
         done = []
-        currentPixelX = 0
-        currentPixelY = 0
-        currentDir = tangents[currentPixelX,currentPixelY]
-        while not (currentPixelX,currentPixelY) in done:
-                done.append( (currentPixelX,currentPixelY) )
-                currentPixelX += currentDir[0] * mu
-                currentPixelY += currentDir[1] * mu
-                currentDir = tangents[currentPixelX,currentPixelY]
+        useful = []
+        angels = array( [ [abs(calAngle(tangents[n,m,1],tangents[n,m,0]))\
+                        for m in range(0,ySize-1)] for n in range(0,xSize-1)])
 
+        for currentPixelX in range(0,xSize-1):
+                for currentPixelY in range(0,ySize - 1):
+                        currentDir = tangents[currentPixelX,currentPixelY]
+                        while (not (currentPixelX,currentPixelY) in done)\
+                                        and (angels[currentPixelX,currentPixelY] < beta):
+                                currentPixelX += round(currentDir[0] * mu)
+                                currentPixelY += round(currentDir[1] * mu)
+                                currentDir = tangents[currentPixelX,currentPixelY]
+                                print (currentPixelX,currentPixelY)
+                                if (currentPixelX,currentPixelY) in done:
+                                        useful.append( (currentPixelX,currentPixelY) )
+                                else:
+                                        done.append( (currentPixelX,currentPixelY) )
+
+        return useful
