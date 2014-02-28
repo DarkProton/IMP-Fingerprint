@@ -4,13 +4,23 @@ from scipy import ndimage
 from scipy import misc
 import numpy as np
 import matplotlib.pyplot as plt
+import time
 
-img = misc.imread('Images/Example_curve_n0.png').astype(float)
-a = basic.pnd(img)
+def main():
+        img = misc.imread('Images/arch.png').astype(float)
 
+        xSize , ySize = np.shape(img)
 
-#a = basic.atd(img)
+        tangents = basic.atd(img)
+        placesWhereTheTangentIsNotZero = np.where( tangents[:,:,1] + tangents[:,:,0] != 0) 
 
-#basic.save_pic(a[:,:,0], 'ATD_u1', colourmap='jet')
-#basic.save_pic(a[:,:,1], 'ATD_u2', colourmap='jet')
-#plt.show()
+        tx = 98
+        ty = 152
+        rx, ry = basic.followRidge(tangents,tx,ty)
+        plt.imshow(img,interpolation='nearest',cmap=plt.get_cmap('gray'))
+
+        plt.plot([tx], [ty],'ro')
+        plt.plot(rx,ry,'bo')
+        plt.show()
+if __name__ == '__main__':
+        main()
