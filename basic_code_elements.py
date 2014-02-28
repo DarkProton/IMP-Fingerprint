@@ -235,7 +235,7 @@ def calAngle(y,x):
 def followRidge(tangents,cX,cY):
         """Given an list of tangents and an input starting position, returns the list of points on a ridge"""
         #cX and cY stand for current x and current Y
-        from numpy import shape,array,where
+        from numpy import shape,array,where,mean,amax
 
         mu = 5
         beta = 0.5
@@ -243,19 +243,18 @@ def followRidge(tangents,cX,cY):
         xSize,ySize,zSize  = shape(tangents)
 
         visited = array( [ [False] * ySize] * xSize )
-        visited[cX,cY] = True
 
         angels = array( [ [abs(calAngle(tangents[n,m,1],tangents[n,m,0]))\
                 for m in range(0,ySize-1)] for n in range(0,xSize-1)])
 
-        while cX >= 0\
-                and cY >= 0\
-                and cX < xSize\
-                and cY < ySize:
-                        cX += round(tangents[cX,cY,0] * mu)
-                        cY += round(tangents[cX,cY,1] * mu)
+        while cX - 2 >= 0\
+                and cY - 2 >= 0\
+                and cX + 2 < xSize\
+                and cY + 2 < ySize:
+                        print (cX,cY)
                         if visited[cX,cY]:
                                 break
                         visited[cX,cY] = True
+                        psi_s = angels[cX,cY]
         usefulCords = where(visited==True)
         return usefulCords
