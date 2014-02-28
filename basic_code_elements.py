@@ -122,8 +122,8 @@ def atd(image, window=9):
     for n in range(1,y_pix-(k1+1)):
         for m in range(1,x_pix-(k1+1)):
             # Extract window from image
-            window =[normals[ky,kx] for ky in range(n-k1,n+k2) \
-                     for kx in range(m-k1,m+k2) if inImageTest(ky,kx)]
+            window = [normals[ky,kx] for ky in range(n-k1,n+k2) \
+                      for kx in range(m-k1,m+k2) if inImageTest(ky,kx)]
 
             # Make window a numpy array for easier indexing
             window = array(window)
@@ -156,3 +156,70 @@ def atd(image, window=9):
             tangents[n,m,:] = u1, u2
 
     return tangents
+
+def OC1(A, B, C, D, E, xl, yl):
+    """Calculates the curvature point via method 1 - needs ADT results"""
+    # Straight line case
+    if A*B == C**2:
+        x = xl/2
+        y = yl/2
+
+    # Curved line case
+    else:
+        x = (B*D - C*E)/(A*B - C**2)
+        y = (A*E  - C*D)/(A*B - C**2)
+
+    pc = x, y
+    
+    return pc
+
+def OC2(A, B, C, D, E, M, xl, yl):
+    """Calculates  the curvature point via method 2 - needs ADT results"""
+    # Two points case
+    if not M == 0:
+        a = D**2/E + (A - B)*D - E
+        b = (B - A)*M - D**2 - E**2 + 2*M*D/E
+        c = (C*M/E + D)*M
+
+        x = (-b - (b**2 - 4*a*c))/(2*a)
+        y = (M - D*x)/E
+
+    # Infinite curvature case
+    else:
+        x = xl/2
+        y = yl/2
+
+    pc = x, y
+
+    return pc
+        
+## Uses sum from numpy
+def OC_switch(window, threshold=0.1):
+    """Decided which OC function to use"""
+    from numpy import sum
+    # Get the window size
+    yl = len(window)
+    xl = len(window)
+
+    # Calculate vector weighting parameter
+    r = [n*window[n,m,0] + m*window[n,m,1] for n in range(yl) \
+         for m in range(xl)]
+
+    # Calculate curvature paramaters
+    A = sum(window[:,:,0]**2)
+    B = sum(window[:,:,1]**2)
+    C = sum(window[:,:,0]*window[:,:,1])
+    D = sum(window[:,:,0]*r)
+    E = sum(window[:,:,1]*r)
+    M = sum(r**2)
+
+    # Calculate decision eigenvalue
+    l = (A + B - ((A - B)**2 + 4*C**2)**0.5)/(2*yl*xl)
+
+    # Decide which OC to use
+    if l > threshold:
+        pc = OC1(A, B, C, D, E, xl, yl)
+    else:
+        pc = OC2(A, B, C, D, E, M, xl, yl)
+
+    return pc
