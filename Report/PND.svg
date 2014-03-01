@@ -1,217 +1,881 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
-<svg width="35cm" height="18cm" viewBox="34 122 692 360" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g>
-    <path style="fill: #ffffff" d="M 81.5613 149.18 L 118.811,149.18 C 123.954,149.18 128.124,154.105 128.124,160.18 C 128.124,166.255 123.954,171.18 118.811,171.18 L 81.5613,171.18 C 76.4181,171.18 72.2488,166.255 72.2488,160.18 C 72.2488,154.105 76.4181,149.18 81.5613,149.18z"/>
-    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 81.5613 149.18 L 118.811,149.18 C 123.954,149.18 128.124,154.105 128.124,160.18 C 128.124,166.255 123.954,171.18 118.811,171.18 L 81.5613,171.18 C 76.4181,171.18 72.2488,166.255 72.2488,160.18 C 72.2488,154.105 76.4181,149.18 81.5613,149.18"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="100.186" y="164.18">
-      <tspan x="100.186" y="164.18">Start</tspan>
-    </text>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1227.4081"
+   height="639.79529"
+   viewBox="34 123 684.88592 361.12889"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="PND.svg">
+  <metadata
+     id="metadata334">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs332" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="706"
+     id="namedview330"
+     showgrid="false"
+     inkscape:zoom="0.50477461"
+     inkscape:cx="608.67057"
+     inkscape:cy="271.85593"
+     inkscape:window-x="1272"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2"
+     fit-margin-top="1"
+     fit-margin-right="1"
+     fit-margin-bottom="1"
+     fit-margin-left="1" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path6"
+     d="m 77.880674,149.74443 37.249696,0 c 5.143,0 9.313,4.925 9.313,11 0,6.075 -4.17,11 -9.313,11 l -37.249696,0 c -5.1432,0 -9.3125,-4.925 -9.3125,-11 0,-6.075 4.1693,-11 9.3125,-11 z"
+     style="fill:#ffffff" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path8"
+     d="m 77.880674,149.74443 37.249696,0 c 5.143,0 9.313,4.925 9.313,11 0,6.075 -4.17,11 -9.313,11 l -37.249696,0 c -5.1432,0 -9.3125,-4.925 -9.3125,-11 0,-6.075 4.1693,-11 9.3125,-11"
+     style="fill:none;stroke:#000000;stroke-width:2" />
+  <polygon
+     id="polygon16"
+     points="73.115,204.13 146.912,204.13 127.258,258.13 53.4606,258.13 "
+     style="fill:#ffffff"
+     transform="translate(-3.6806267,0.56443574)" />
+  <polygon
+     id="polygon18"
+     points="73.115,204.13 146.912,204.13 127.258,258.13 53.4606,258.13 "
+     style="fill:none;stroke:#000000;stroke-width:2"
+     transform="translate(-3.6806267,0.56443574)" />
+  <g
+     id="g26"
+     transform="translate(-3.6806267,0.56443574)">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="100.186"
+       y1="171.17999"
+       x2="107.231"
+       y2="194.8"
+       id="line28" />
+    <polygon
+       style="fill:#000000"
+       points="107.231,194.8 111.308,190.975 109.374,201.987 101.725,193.833 "
+       id="polygon30" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="107.231,194.8 111.308,190.975 109.374,201.987 101.725,193.833 "
+       id="polygon32" />
   </g>
-  <g>
-    <polygon style="fill: #ffffff" points="73.1149,204.13 146.912,204.13 127.258,258.13 53.4605,258.13 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="73.1149,204.13 146.912,204.13 127.258,258.13 53.4605,258.13 "/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="100.186" y="227.03">
-      <tspan x="100.186" y="227.03">take</tspan>
-      <tspan x="100.186" y="243.03">Image</tspan>
-    </text>
+  <rect
+     id="rect36"
+     height="54"
+     width="112"
+     y="281.37646"
+     x="40.505573"
+     style="fill:#ffffff" />
+  <rect
+     id="rect38"
+     height="54"
+     width="112"
+     y="281.37646"
+     x="40.505573"
+     style="fill:none;stroke:#000000;stroke-width:2" />
+  <g
+     id="g46"
+     transform="translate(-3.6806267,0.56443574)">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="90.359001"
+       y1="258.13"
+       x2="96.315598"
+       y2="271.87799"
+       id="line48" />
+    <polygon
+       style="fill:#000000"
+       points="96.3156,271.878 99.9096,267.597 99.2972,278.76 90.7338,271.572 "
+       id="polygon50" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="96.3156,271.878 99.9096,267.597 99.2972,278.76 90.7338,271.572 "
+       id="polygon52" />
   </g>
-  <g>
-    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="100.186" y1="171.18" x2="107.231" y2="194.8"/>
-    <polygon style="fill: #000000" points="109.374,201.987 101.725,193.833 107.231,194.8 111.308,190.975 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="109.374,201.987 101.725,193.833 107.231,194.8 111.308,190.975 "/>
-  </g>
-  <g>
-    <rect style="fill: #ffffff" x="44.1863" y="280.812" width="112" height="54"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="44.1863" y="280.812" width="112" height="54"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="100.186" y="303.712">
-      <tspan x="100.186" y="303.712">y_len, x_len =</tspan>
-      <tspan x="100.186" y="319.712">size(image)</tspan>
-    </text>
-  </g>
-  <g>
-    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="90.3591" y1="258.13" x2="96.3157" y2="271.878"/>
-    <polygon style="fill: #000000" points="99.2973,278.76 90.7339,271.572 96.3157,271.878 99.9097,267.597 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="99.2973,278.76 90.7339,271.572 96.3157,271.878 99.9097,267.597 "/>
-  </g>
-  <g>
-    <rect style="fill: #ffffff" x="35.2863" y="370.87" width="129.8" height="70"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="35.2863" y="370.87" width="129.8" height="70"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="100.186" y="393.77">
-      <tspan x="100.186" y="393.77">normals =</tspan>
-      <tspan x="100.186" y="409.77">y_len x x_len</tspan>
-      <tspan x="100.186" y="425.77">array of zeros</tspan>
-    </text>
-  </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="100.186" y="405.87">
-    <tspan x="100.186" y="405.87"></tspan>
+  <rect
+     id="rect56"
+     height="70"
+     width="129.8"
+     y="371.43445"
+     x="31.605574"
+     style="fill:#ffffff" />
+  <rect
+     id="rect58"
+     height="70"
+     width="129.8"
+     y="371.43445"
+     x="31.605574"
+     style="fill:none;stroke:#000000;stroke-width:2" />
+  <text
+     font-size="12.8"
+     style="font-size:12.80000019px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;font-family:sans-serif"
+     x="96.505371"
+     y="406.43445"
+     id="text68">
+    <tspan
+       x="96.505371"
+       y="406.43445"
+       id="tspan70" />
   </text>
-  <g>
-    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="100.186" y1="334.812" x2="100.186" y2="361.134"/>
-    <polygon style="fill: #000000" points="100.186,368.634 95.1863,358.634 100.186,361.134 105.186,358.634 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="100.186,368.634 95.1863,358.634 100.186,361.134 105.186,358.634 "/>
+  <g
+     id="g72"
+     transform="translate(-3.6806267,0.56443574)">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="100.186"
+       y1="334.81201"
+       x2="100.186"
+       y2="361.134"
+       id="line74" />
+    <polygon
+       style="fill:#000000"
+       points="100.186,361.134 105.186,358.634 100.186,368.634 95.1862,358.634 "
+       id="polygon76" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="100.186,361.134 105.186,358.634 100.186,368.634 95.1862,358.634 "
+       id="polygon78" />
   </g>
-  <g>
-    <rect style="fill: #ffffff" x="332.235" y="124" width="61.45" height="38"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="332.235" y="124" width="61.45" height="38"/>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="362.96" y="146.9">
-      <tspan x="362.96" y="146.9">m = 1</tspan>
-    </text>
+  <rect
+     id="rect82"
+     height="38"
+     width="61.450001"
+     y="124.56445"
+     x="328.55338"
+     style="fill:#ffffff" />
+  <rect
+     id="rect84"
+     height="38"
+     width="61.450001"
+     y="124.56445"
+     x="328.55338"
+     style="fill:none;stroke:#000000;stroke-width:2" />
+  <polygon
+     id="polygon92"
+     points="362.96,196.335 414.277,243 362.96,289.665 311.644,243 "
+     style="fill:#ffffff"
+     transform="translate(-3.6806267,0.56443574)" />
+  <polygon
+     id="polygon94"
+     points="362.96,196.335 414.277,243 362.96,289.665 311.644,243 "
+     style="fill:none;stroke:#000000;stroke-width:2"
+     transform="translate(-3.6806267,0.56443574)" />
+  <rect
+     id="rect104"
+     height="38"
+     width="61.450001"
+     y="312.46445"
+     x="328.55338"
+     style="fill:#ffffff" />
+  <rect
+     id="rect106"
+     height="38"
+     width="61.450001"
+     y="312.46445"
+     x="328.55338"
+     style="fill:none;stroke:#000000;stroke-width:2" />
+  <polygon
+     id="polygon114"
+     points="362.96,381.9 414.277,428.565 362.96,475.23 311.644,428.565 "
+     style="fill:#ffffff"
+     transform="translate(-3.6806267,0.56443574)" />
+  <polygon
+     id="polygon116"
+     points="362.96,381.9 414.277,428.565 362.96,475.23 311.644,428.565 "
+     style="fill:none;stroke:#000000;stroke-width:2"
+     transform="translate(-3.6806267,0.56443574)" />
+  <rect
+     id="rect126"
+     height="38"
+     width="92"
+     y="162.56442"
+     x="482.46936"
+     style="fill:#ffffff" />
+  <rect
+     id="rect128"
+     height="38"
+     width="92"
+     y="162.56442"
+     x="482.46936"
+     style="fill:none;stroke:#000000;stroke-width:2" />
+  <rect
+     id="rect136"
+     height="38"
+     width="96"
+     y="255.56442"
+     x="480.46936"
+     style="fill:#ffffff" />
+  <rect
+     id="rect138"
+     height="38"
+     width="96"
+     y="255.56442"
+     x="480.46936"
+     style="fill:none;stroke:#000000;stroke-width:2" />
+  <rect
+     id="rect146"
+     height="54"
+     width="112.6"
+     y="339.56445"
+     x="472.16937"
+     style="fill:#ffffff" />
+  <rect
+     id="rect148"
+     height="54"
+     width="112.6"
+     y="339.56445"
+     x="472.16937"
+     style="fill:none;stroke:#000000;stroke-width:2" />
+  <g
+     id="g156"
+     transform="translate(-3.6806267,0.56443574)">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="532.15002"
+       y1="200"
+       x2="532.15002"
+       y2="245.26401"
+       id="line158" />
+    <polygon
+       style="fill:#000000"
+       points="532.15,245.264 537.15,242.764 532.15,252.764 527.15,242.764 "
+       id="polygon160" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="532.15,245.264 537.15,242.764 532.15,252.764 527.15,242.764 "
+       id="polygon162" />
   </g>
-  <g>
-    <polygon style="fill: #ffffff" points="362.96,196.335 414.276,243 362.96,289.665 311.643,243 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="362.96,196.335 414.276,243 362.96,289.665 311.643,243 "/>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="362.96" y="238.9">
-      <tspan x="362.96" y="238.9">m =</tspan>
-      <tspan x="362.96" y="254.9">y_len</tspan>
-    </text>
+  <g
+     id="g164"
+     transform="translate(-3.6806267,0.56443574)">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="532.15002"
+       y1="293"
+       x2="532.15002"
+       y2="329.26401"
+       id="line166" />
+    <polygon
+       style="fill:#000000"
+       points="532.15,329.264 537.15,326.764 532.15,336.764 527.15,326.764 "
+       id="polygon168" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="532.15,329.264 537.15,326.764 532.15,336.764 527.15,326.764 "
+       id="polygon170" />
   </g>
-  <g>
-    <rect style="fill: #ffffff" x="332.235" y="311.9" width="61.45" height="38"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="332.235" y="311.9" width="61.45" height="38"/>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="362.96" y="334.8">
-      <tspan x="362.96" y="334.8">n = 1</tspan>
-    </text>
+  <g
+     id="g172"
+     transform="translate(-3.6806267,0.56443574)">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="362.95999"
+       y1="349.89999"
+       x2="362.95999"
+       y2="372.164"
+       id="line174" />
+    <polygon
+       style="fill:#000000"
+       points="362.96,372.164 367.96,369.664 362.96,379.664 357.96,369.664 "
+       id="polygon176" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="362.96,372.164 367.96,369.664 362.96,379.664 357.96,369.664 "
+       id="polygon178" />
   </g>
-  <g>
-    <polygon style="fill: #ffffff" points="362.96,381.9 414.276,428.565 362.96,475.23 311.643,428.565 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="362.96,381.9 414.276,428.565 362.96,475.23 311.643,428.565 "/>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="362.96" y="424.465">
-      <tspan x="362.96" y="424.465">n =</tspan>
-      <tspan x="362.96" y="440.465">y_len</tspan>
-    </text>
+  <g
+     id="g180"
+     transform="translate(-3.6806267,0.56443574)">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="362.95999"
+       y1="289.664"
+       x2="362.95999"
+       y2="302.164"
+       id="line182" />
+    <polygon
+       style="fill:#000000"
+       points="362.96,302.164 367.96,299.664 362.96,309.664 357.96,299.664 "
+       id="polygon184" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="362.96,302.164 367.96,299.664 362.96,309.664 357.96,299.664 "
+       id="polygon186" />
   </g>
-  <g>
-    <rect style="fill: #ffffff" x="486.15" y="162" width="92" height="38"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="486.15" y="162" width="92" height="38"/>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="532.15" y="184.9">
-      <tspan x="532.15" y="184.9">n1 = ...</tspan>
-    </text>
+  <g
+     id="g188"
+     transform="matrix(1,0,0,0.9386138,-3.6806267,12.540822)">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2.06436515"
+       x1="362.95901"
+       y1="159.66701"
+       x2="362.95999"
+       y2="186.599"
+       id="line190" />
+    <polygon
+       style="fill:#000000"
+       points="367.96,184.098 362.96,194.099 357.96,184.099 362.96,186.599 "
+       id="polygon192" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2.06436515"
+       points="362.96,194.099 357.96,184.099 362.96,186.599 367.96,184.098 "
+       id="polygon194" />
   </g>
-  <g>
-    <rect style="fill: #ffffff" x="484.15" y="255" width="96" height="38"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="484.15" y="255" width="96" height="38"/>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="532.15" y="277.9">
-      <tspan x="532.15" y="277.9">n2 = ...</tspan>
-    </text>
+  <g
+     id="g196"
+     transform="translate(-3.6806267,0.56443574)">
+    <polyline
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="414.276,428.566 451.142,428.566 451.142,181 476.414,181 "
+       id="polyline198" />
+    <polygon
+       style="fill:#000000"
+       points="476.414,181 473.914,176 483.914,181 473.914,186 "
+       id="polygon200" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="476.414,181 473.914,176 483.914,181 473.914,186 "
+       id="polygon202" />
   </g>
-  <g>
-    <rect style="fill: #ffffff" x="475.85" y="339" width="112.6" height="54"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="475.85" y="339" width="112.6" height="54"/>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="532.15" y="361.9">
-      <tspan x="532.15" y="361.9">normals[n,m:]</tspan>
-      <tspan x="532.15" y="377.9">= n1, n2</tspan>
-    </text>
+  <g
+     id="g204"
+     transform="translate(-3.6806267,0.56443574)">
+    <polyline
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="100.186,440.87 100.186,461.87 187.002,461.87 187.002,143 322.498,143 "
+       id="polyline206" />
+    <polygon
+       style="fill:#000000"
+       points="322.498,143 319.998,138 329.998,143 319.998,148 "
+       id="polygon208" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="322.498,143 319.998,138 329.998,143 319.998,148 "
+       id="polygon210" />
   </g>
-  <g>
-    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="532.15" y1="200" x2="532.15" y2="245.264"/>
-    <polygon style="fill: #000000" points="532.15,252.764 527.15,242.764 532.15,245.264 537.15,242.764 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="532.15,252.764 527.15,242.764 532.15,245.264 537.15,242.764 "/>
+  <rect
+     id="rect214"
+     height="38"
+     width="86"
+     y="423.56445"
+     x="485.46936"
+     style="fill:#ffffff" />
+  <rect
+     id="rect216"
+     height="38"
+     width="86"
+     y="423.56445"
+     x="485.46936"
+     style="fill:none;stroke:#000000;stroke-width:2" />
+  <g
+     id="g222"
+     transform="translate(-3.6806267,0.56443574)">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="532.15002"
+       y1="393"
+       x2="532.15002"
+       y2="413.26401"
+       id="line224" />
+    <polygon
+       style="fill:#000000"
+       points="532.15,413.264 537.15,410.764 532.15,420.764 527.15,410.764 "
+       id="polygon226" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="532.15,413.264 537.15,410.764 532.15,420.764 527.15,410.764 "
+       id="polygon228" />
   </g>
-  <g>
-    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="532.15" y1="293" x2="532.15" y2="329.264"/>
-    <polygon style="fill: #000000" points="532.15,336.764 527.15,326.764 532.15,329.264 537.15,326.764 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="532.15,336.764 527.15,326.764 532.15,329.264 537.15,326.764 "/>
+  <rect
+     id="rect232"
+     height="38"
+     width="86"
+     y="311.46445"
+     x="210.82138"
+     style="fill:#ffffff" />
+  <rect
+     id="rect234"
+     height="38"
+     width="86"
+     y="311.46445"
+     x="210.82138"
+     style="fill:none;stroke:#000000;stroke-width:2" />
+  <g
+     id="g240"
+     transform="translate(-3.6806267,0.56443574)">
+    <polyline
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="311.644,428.566 311.644,429 257.502,429 257.502,358.636 "
+       id="polyline242" />
+    <polygon
+       style="fill:#000000"
+       points="257.502,358.636 252.502,361.136 257.502,351.136 262.502,361.136 "
+       id="polygon244" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="257.502,358.636 252.502,361.136 257.502,351.136 262.502,361.136 "
+       id="polygon246" />
   </g>
-  <g>
-    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="362.96" y1="349.9" x2="362.96" y2="372.164"/>
-    <polygon style="fill: #000000" points="362.96,379.664 357.96,369.664 362.96,372.164 367.96,369.664 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="362.96,379.664 357.96,369.664 362.96,372.164 367.96,369.664 "/>
+  <g
+     id="g248"
+     transform="translate(-3.6806267,0.56443574)">
+    <polyline
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="257.502,310.9 257.502,178.001 353.224,178.001 "
+       id="polyline250" />
+    <polygon
+       style="fill:#000000"
+       points="353.224,178.001 350.724,173.001 360.724,178.001 350.724,183.001 "
+       id="polygon252" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="353.224,178.001 350.724,173.001 360.724,178.001 350.724,183.001 "
+       id="polygon254" />
   </g>
-  <g>
-    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="362.96" y1="289.665" x2="362.96" y2="302.164"/>
-    <polygon style="fill: #000000" points="362.96,309.664 357.96,299.664 362.96,302.164 367.96,299.664 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="362.96,309.664 357.96,299.664 362.96,302.164 367.96,299.664 "/>
+  <rect
+     id="rect258"
+     height="40"
+     width="86.4375"
+     y="171.56442"
+     x="625.5614"
+     style="fill:#ffffff" />
+  <rect
+     id="rect260"
+     height="40"
+     width="86.4375"
+     y="171.56442"
+     x="625.5614"
+     style="fill:none;stroke:#000000;stroke-width:2" />
+  <line
+     id="line262"
+     y2="211.56442"
+     x2="634.20538"
+     y1="171.56442"
+     x1="634.20538"
+     style="fill:none;stroke:#000000;stroke-width:2" />
+  <line
+     id="line264"
+     y2="211.56442"
+     x2="703.35541"
+     y1="171.56442"
+     x1="703.35541"
+     style="fill:none;stroke:#000000;stroke-width:2" />
+  <polygon
+     id="polygon274"
+     points="639.614,250 724.961,250 705.307,304 619.96,304 "
+     style="fill:#ffffff"
+     transform="translate(-3.6806267,0.56443574)" />
+  <polygon
+     id="polygon276"
+     points="639.614,250 724.961,250 705.307,304 619.96,304 "
+     style="fill:none;stroke:#000000;stroke-width:2"
+     transform="translate(-3.6806267,0.56443574)" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path286"
+     d="m 653.60537,358.56443 30.35,0 c 4.19,0 7.587,4.925 7.587,11 0,6.075 -3.397,11 -7.587,11 l -30.35,0 c -4.191,0 -7.588,-4.925 -7.588,-11 0,-6.075 3.397,-11 7.588,-11 z"
+     style="fill:#ffffff" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path288"
+     d="m 653.60537,358.56443 30.35,0 c 4.19,0 7.587,4.925 7.587,11 0,6.075 -3.397,11 -7.587,11 l -30.35,0 c -4.191,0 -7.588,-4.925 -7.588,-11 0,-6.075 3.397,-11 7.588,-11"
+     style="fill:none;stroke:#000000;stroke-width:2" />
+  <g
+     id="g294"
+     transform="translate(-3.6806267,0.56443574)">
+    <polyline
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="414.276,243 430.002,243 430.002,137 672.46,137 672.46,161.264 "
+       id="polyline296" />
+    <polygon
+       style="fill:#000000"
+       points="672.46,161.264 677.46,158.764 672.46,168.764 667.46,158.764 "
+       id="polygon298" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="672.46,161.264 677.46,158.764 672.46,168.764 667.46,158.764 "
+       id="polygon300" />
   </g>
-  <g>
-    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="362.96" y1="159.667" x2="362.96" y2="186.599"/>
-    <polygon style="fill: #000000" points="362.96,194.099 357.96,184.099 362.96,186.599 367.96,184.099 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="362.96,194.099 357.96,184.099 362.96,186.599 367.96,184.099 "/>
+  <g
+     id="g302"
+     transform="translate(-3.6806267,0.56443574)">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="672.46002"
+       y1="211"
+       x2="679.909"
+       y2="240.55901"
+       id="line304" />
+    <polygon
+       style="fill:#000000"
+       points="679.909,240.559 684.146,236.913 681.742,247.832 674.45,239.357 "
+       id="polygon306" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="679.909,240.559 684.146,236.913 681.742,247.832 674.45,239.357 "
+       id="polygon308" />
   </g>
-  <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="414.276,428.565 451.141,428.565 451.141,181 476.414,181 "/>
-    <polygon style="fill: #000000" points="483.914,181 473.914,186 476.414,181 473.914,176 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="483.914,181 473.914,186 476.414,181 473.914,176 "/>
+  <g
+     id="g310"
+     transform="translate(-3.6806267,0.56443574)">
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2"
+       x1="662.63397"
+       y1="304"
+       x2="670.71698"
+       y2="348.42099"
+       id="line312" />
+    <polygon
+       style="fill:#000000"
+       points="670.717,348.421 675.189,345.066 672.06,355.8 665.35,346.857 "
+       id="polygon314" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="670.717,348.421 675.189,345.066 672.06,355.8 665.35,346.857 "
+       id="polygon316" />
   </g>
-  <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="100.186,440.87 100.186,461.87 187.002,461.87 187.002,143 322.499,143 "/>
-    <polygon style="fill: #000000" points="329.999,143 319.999,148 322.499,143 319.999,138 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="329.999,143 319.999,148 322.499,143 319.999,138 "/>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:2"
+     d="m 430.35837,433.98843 a 5.16651,5.16651 0 0 0 -0.332,-10.323"
+     id="path318"
+     inkscape:connector-curvature="0" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:2"
+     points="532.15,461 532.15,482 433.376,482 433.376,432.376 "
+     id="polyline320"
+     transform="translate(-3.6806267,0.56443574)" />
+  <g
+     id="g322"
+     transform="translate(-3.6806267,0.56443574)">
+    <polyline
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="433.828,423.094 433.578,423.094 433.578,365.9 372.696,365.9 "
+       id="polyline324" />
+    <polygon
+       style="fill:#000000"
+       points="372.696,365.9 375.196,370.9 365.196,365.9 375.196,360.9 "
+       id="polygon326" />
+    <polygon
+       style="fill:none;stroke:#000000;stroke-width:2"
+       points="372.696,365.9 375.196,370.9 365.196,365.9 375.196,360.9 "
+       id="polygon328" />
   </g>
-  <g>
-    <rect style="fill: #ffffff" x="489.15" y="423" width="86" height="38"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="489.15" y="423" width="86" height="38"/>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="532.15" y="445.9">
-      <tspan x="532.15" y="445.9">n += 1</tspan>
-    </text>
-  </g>
-  <g>
-    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="532.15" y1="393" x2="532.15" y2="413.264"/>
-    <polygon style="fill: #000000" points="532.15,420.764 527.15,410.764 532.15,413.264 537.15,410.764 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="532.15,420.764 527.15,410.764 532.15,413.264 537.15,410.764 "/>
-  </g>
-  <g>
-    <rect style="fill: #ffffff" x="214.502" y="310.9" width="86" height="38"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="214.502" y="310.9" width="86" height="38"/>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="257.502" y="333.8">
-      <tspan x="257.502" y="333.8">m += 1</tspan>
-    </text>
-  </g>
-  <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="311.643,428.565 311.643,429 257.502,429 257.502,358.636 "/>
-    <polygon style="fill: #000000" points="257.502,351.136 262.502,361.136 257.502,358.636 252.502,361.136 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="257.502,351.136 262.502,361.136 257.502,358.636 252.502,361.136 "/>
-  </g>
-  <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="257.502,310.9 257.502,178.001 353.224,178.001 "/>
-    <polygon style="fill: #000000" points="360.724,178.001 350.724,183.001 353.224,178.001 350.724,173.001 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="360.724,178.001 350.724,183.001 353.224,178.001 350.724,173.001 "/>
-  </g>
-  <g>
-    <rect style="fill: #ffffff" x="629.242" y="171" width="86.4375" height="40"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="629.242" y="171" width="86.4375" height="40"/>
-    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="637.886" y1="171" x2="637.886" y2="211"/>
-    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="707.036" y1="171" x2="707.036" y2="211"/>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="672.461" y="187">
-      <tspan x="672.461" y="187">normalise</tspan>
-      <tspan x="672.461" y="203">normals</tspan>
-    </text>
-  </g>
-  <g>
-    <polygon style="fill: #ffffff" points="639.615,250 724.962,250 705.307,304 619.96,304 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="639.615,250 724.962,250 705.307,304 619.96,304 "/>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="672.461" y="272.9">
-      <tspan x="672.461" y="272.9">return</tspan>
-      <tspan x="672.461" y="288.9">normals</tspan>
-    </text>
-  </g>
-  <g>
-    <path style="fill: #ffffff" d="M 657.286 358 L 687.636,358 C 691.826,358 695.223,362.925 695.223,369 C 695.223,375.075 691.826,380 687.636,380 L 657.286,380 C 653.096,380 649.698,375.075 649.698,369 C 649.698,362.925 653.096,358 657.286,358z"/>
-    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 657.286 358 L 687.636,358 C 691.826,358 695.223,362.925 695.223,369 C 695.223,375.075 691.826,380 687.636,380 L 657.286,380 C 653.096,380 649.698,375.075 649.698,369 C 649.698,362.925 653.096,358 657.286,358"/>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="672.461" y="373">
-      <tspan x="672.461" y="373">End</tspan>
-    </text>
-  </g>
-  <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="414.276,243 430.002,243 430.002,137 672.461,137 672.461,161.264 "/>
-    <polygon style="fill: #000000" points="672.461,168.764 667.461,158.764 672.461,161.264 677.461,158.764 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="672.461,168.764 667.461,158.764 672.461,161.264 677.461,158.764 "/>
-  </g>
-  <g>
-    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="672.461" y1="211" x2="679.909" y2="240.559"/>
-    <polygon style="fill: #000000" points="681.742,247.832 674.45,239.357 679.909,240.559 684.147,236.913 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="681.742,247.832 674.45,239.357 679.909,240.559 684.147,236.913 "/>
-  </g>
-  <g>
-    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="662.634" y1="304" x2="670.718" y2="348.421"/>
-    <polygon style="fill: #000000" points="672.061,355.8 665.351,346.857 670.718,348.421 675.189,345.066 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="672.061,355.8 665.351,346.857 670.718,348.421 675.189,345.066 "/>
-  </g>
-  <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 433.127,433.375 A 5.07691,5.07691 0 1 0 434.127,423.375"/>
-  <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="532.15,461 532.15,482 433.377,482 433.377,442.111 "/>
-    <polygon style="fill: #000000" points="433.377,434.611 438.377,444.611 433.377,442.111 428.377,444.611 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="433.377,434.611 438.377,444.611 433.377,442.111 428.377,444.611 "/>
-  </g>
-  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="434.127,423.125 433.877,423.125 433.877,365.9 362.96,365.9 "/>
+  <text
+     xml:space="preserve"
+     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     x="95.810387"
+     y="164.98499"
+     id="text3311"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3313"
+       x="95.810387"
+       y="164.98499">Start</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     x="96.488991"
+     y="226.96329"
+     id="text3319"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3321"
+       x="96.488991"
+       y="226.96329">Take</tspan><tspan
+       sodipodi:role="line"
+       x="96.488991"
+       y="243.5381"
+       id="tspan3323"
+       style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text">image</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     x="96.588753"
+     y="302.96564"
+     id="text3330"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="96.588753"
+       y="302.96564"
+       id="tspan3334"
+       style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text">y_len, x_len =</tspan><tspan
+       sodipodi:role="line"
+       x="96.588753"
+       y="320.25751"
+       id="tspan3338"><tspan
+   style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+   id="tspan3345">image</tspan> size</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     x="96.49762"
+     y="393.10443"
+     id="text3353"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3355"
+       x="100.05627"
+       y="393.10443"><tspan
+         style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+         id="tspan3365">normals = </tspan></tspan><tspan
+       sodipodi:role="line"
+       x="96.49762"
+       y="410.3963"
+       id="tspan3357">(<tspan
+   style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+   id="tspan3363">y_len</tspan> × <tspan
+   style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+   id="tspan3361">x_len</tspan>)</tspan><tspan
+       sodipodi:role="line"
+       x="96.49762"
+       y="427.68814"
+       id="tspan3359">array of zeros</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     x="359.32803"
+     y="147.69945"
+     id="text3367"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3369"
+       x="359.32803"
+       y="147.69945"><tspan
+   style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+   id="tspan3371">m</tspan> = 1</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+     x="359.2016"
+     y="237.10106"
+     id="text3377"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3379"
+       x="359.2016"
+       y="237.10106">m =</tspan><tspan
+       sodipodi:role="line"
+       x="359.2016"
+       y="254.03439"
+       id="tspan3381">y_len</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+     x="254.34908"
+     y="334.09659"
+     id="text3388"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3390"
+       x="254.34908"
+       y="334.09659">m <tspan
+   style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+   id="tspan3411">+= 1</tspan></tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     x="359.12943"
+     y="335.59949"
+     id="text3405"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3407"
+       x="359.12943"
+       y="335.59949"><tspan
+   style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+   id="tspan3409">n</tspan> = 1</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+     x="359.19534"
+     y="423.49185"
+     id="text3377-1"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3379-7"
+       x="359.19534"
+       y="423.49185">n =</tspan><tspan
+       sodipodi:role="line"
+       x="359.19534"
+       y="440.42517"
+       id="tspan3381-4">x_len</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     x="280.01715"
+     y="426.43677"
+     id="text3437"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3439"
+       x="280.01715"
+       y="426.43677">True</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     x="406.10391"
+     y="408.02121"
+     id="text3441"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3443"
+       x="406.10391"
+       y="408.02121">False</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     x="385.53937"
+     y="290.2464"
+     id="text3437-0"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3439-9"
+       x="385.53937"
+       y="290.2464">True</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     x="407.48608"
+     y="222.80774"
+     id="text3441-4"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3443-8"
+       x="407.48608"
+       y="222.80774">False</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     x="528.94934"
+     y="185.42641"
+     id="text3472"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3474"
+       x="528.94934"
+       y="185.42641"><tspan
+   style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+   id="tspan3476">n1</tspan> = ...</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     x="528.94934"
+     y="278.42645"
+     id="text3472-8"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3474-2"
+       x="528.94934"
+       y="278.42645"><tspan
+   style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+   id="tspan3476-4">n2</tspan> = ...</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     x="529.76959"
+     y="361.74973"
+     id="text3512"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3514"
+       x="529.76959"
+       y="361.74973"
+       style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text">normals[n,m,:]</tspan><tspan
+       sodipodi:role="line"
+       x="529.76959"
+       y="379.0416"
+       id="tspan3516">= <tspan
+   style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+   id="tspan3518">n1</tspan>, <tspan
+   style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+   id="tspan3520">n2</tspan></tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+     x="528.32043"
+     y="446.19659"
+     id="text3388-5"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3390-5"
+       x="528.32043"
+       y="446.19659"><tspan
+         style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+         id="tspan3411-1"><tspan
+   style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+   id="tspan3555">n</tspan> += 1</tspan></tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     x="668.76953"
+     y="188.23927"
+     id="text3557"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3559"
+       x="668.76953"
+       y="188.23927">normalise</tspan><tspan
+       sodipodi:role="line"
+       x="668.76953"
+       y="204.81409"
+       id="tspan3561"
+       style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text">normals</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     x="669.08118"
+     y="273.74875"
+     id="text3570"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3572"
+       x="669.08118"
+       y="273.74875">return</tspan><tspan
+       sodipodi:role="line"
+       x="669.08118"
+       y="290.32355"
+       id="tspan3574"
+       style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text">normals</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     x="668.37024"
+     y="373.80521"
+     id="text3581"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3583"
+       x="668.37024"
+       y="373.80521">End</tspan></text>
 </svg>
