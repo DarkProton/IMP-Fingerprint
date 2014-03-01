@@ -232,12 +232,12 @@ def calAngle(y,x):
                 return pi/2
         else:
                 return arctan(y/x)
-def followRidge(tangents,cX,cY):
+def followRidge(tangents,cX,cY,mu=5):
         """Given an list of tangents and an input starting position, returns the list of points on a ridge"""
         #cX and cY stand for current x and current Y
         from numpy import shape,array,where,mean,amax
+        from math import cos, sin
 
-        mu = 5
         beta = 0.5
 
         xSize,ySize,zSize  = shape(tangents)
@@ -256,5 +256,7 @@ def followRidge(tangents,cX,cY):
                                 break
                         visited[cX,cY] = True
                         psi_s = angels[cX,cY]
+                        cX += round( cos(psi_s) * mu)
+                        cY += round( sin(psi_s) * mu)
         usefulCords = where(visited==True)
         return usefulCords
