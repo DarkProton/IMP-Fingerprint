@@ -236,7 +236,7 @@ def followRidge(tangents,cX,cY,mu=5):
         """Given an list of tangents and an input starting position, returns the list of points on a ridge"""
         #cX and cY stand for current x and current Y
         from numpy import shape,array,where,mean,amax
-        from math import cos, sin
+        from math import cos, sin, pi
 
         beta = 0.5
 
@@ -255,7 +255,7 @@ def followRidge(tangents,cX,cY,mu=5):
                         if visited[cX,cY]:
                                 break
                         visited[cX,cY] = True
-                        psi_s = angels[cX,cY]
+                        psi_s = angels[cX,cY] + pi/2
                         cX += round( cos(psi_s) * mu)
                         cY += round( sin(psi_s) * mu)
         usefulCords = where(visited==True)
