@@ -223,3 +223,40 @@ def OC_switch(window, threshold=0.1):
         pc = OC2(A, B, C, D, E, M, xl, yl)
 
     return pc
+
+def calAngle(y,x):
+        from numpy import arctan,pi
+        if x == 0 and y == 0:
+                return 0
+        elif x == 0:
+                return pi/2
+        else:
+                return arctan(y/x)
+def followRidge(tangents,cX,cY,mu=5):
+        """Given an list of tangents and an input starting position, returns the list of points on a ridge"""
+        #cX and cY stand for current x and current Y
+        from numpy import shape,array,where,mean,amax
+        from math import cos, sin
+
+        beta = 0.5
+
+        xSize,ySize,zSize  = shape(tangents)
+
+        visited = array( [ [False] * ySize] * xSize )
+
+        angels = array( [ [abs(calAngle(tangents[n,m,1],tangents[n,m,0]))\
+                for m in range(0,ySize-1)] for n in range(0,xSize-1)])
+
+        while cX - 2 >= 0\
+                and cY - 2 >= 0\
+                and cX + 2 < xSize\
+                and cY + 2 < ySize:
+                        print (cX,cY)
+                        if visited[cX,cY]:
+                                break
+                        visited[cX,cY] = True
+                        psi_s = angels[cX,cY]
+                        cX += round( cos(psi_s) * mu)
+                        cY += round( sin(psi_s) * mu)
+        usefulCords = where(visited==True)
+        return usefulCords

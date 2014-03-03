@@ -4,13 +4,27 @@ from scipy import ndimage
 from scipy import misc
 import numpy as np
 import matplotlib.pyplot as plt
+import time
 
-img = misc.imread('Images/Example_curve_n0.png').astype(float)
-a = basic.pnd(img)
+def main():
+        img = misc.imread('Images/test1_gray.png').astype(float)
 
+        xSize , ySize = np.shape(img)
 
-#a = basic.atd(img)
+        tangents = basic.atd(img,11)
+        np.save('tan.npy',tangents)
+        print ('Tangents done')
 
-#basic.save_pic(a[:,:,0], 'ATD_u1', colourmap='jet')
-#basic.save_pic(a[:,:,1], 'ATD_u2', colourmap='jet')
-#plt.show()
+        tangents = np.load('tan.npy')
+        tx = 57
+        ty = 110
+        rx, ry = basic.followRidge(tangents,tx,ty,2)
+        plt.imshow(img,interpolation='nearest',cmap=plt.get_cmap('gray'))
+
+        plt.plot([tx], [ty],'ro')
+        plt.plot(rx,ry,'bo')
+        #plt.quiver(tangents[::4,::4,0], tangents[::4,::4,1])
+
+        plt.show()
+if __name__ == '__main__':
+        main()
