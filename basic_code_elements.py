@@ -95,7 +95,7 @@ def pnd(image):
 ## Uses zeros, sum, sqrt from numpy
 def atd(image, window=9):
     """Returns the averaged tangent diraction of a normal array"""
-    from numpy import zeros, sum, sqrt, array
+    from numpy import zeros, sum, sqrt, array, mean
     # Get image dimensions
     y_pix = len(image)
     x_pix = len(image[0])
@@ -132,6 +132,7 @@ def atd(image, window=9):
             A = sum(window[:,0]**2)
             B = sum(window[:,1]**2)
             C = sum(window[:,0]*window[:,1])
+            mn1 = mean(window[:,0])
 
             # Diagonal matrix case
             if C == 0 and A < B:
@@ -149,8 +150,14 @@ def atd(image, window=9):
 
             # Non-diagonal case
             else:
-                D = (B - A)/(2*C) - sqrt(1 + ((B - A)/(2*C))**2) 
-                u1 = 1/sqrt(1 + D**2)
+                D = (B - A)/(2*C) - sqrt(1 + ((B - A)/(2*C))**2)
+
+                # Ensure that u1 points in the correct direction
+                if mn1 > 0:
+                    u1 = 1/sqrt(1 + D**2)
+                else:
+                    u1 = -1/sqrt(1 + D**2)
+                    
                 u2 = u1*D
 
             tangents[n,m,:] = u1, u2
