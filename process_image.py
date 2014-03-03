@@ -11,18 +11,20 @@ def main():
 
         xSize , ySize = np.shape(img)
 
-        tangents = basic.atd(img,9)
-        np.save('tan.npy',tangents)
-        print ('Tangents done')
+        #tangents = basic.atd(img,9)
+        #np.save('tan.npy',tangents)
+        #print ('Tangents done')
 
         tangents = np.load('tan.npy')
         tx = 66
         ty = 128
-        rx, ry = basic.followRidge(tangents,tx,ty,2)
+        rx, ry = basic.followRidge(tangents,tx,ty,2,np.pi/2)
+        rx1, ry1 = basic.followRidge(tangents,tx,ty,2,-np.pi/2)
         plt.imshow(img,interpolation='nearest',cmap=plt.get_cmap('gray'))
 
         plt.plot([tx], [ty],'ro')
         plt.plot(rx,ry,'r--')
+        plt.plot(rx1,ry1,'b--')
         #plt.quiver(tangents[::4,::4,0], tangents[::4,::4,1])
 
         plt.show()

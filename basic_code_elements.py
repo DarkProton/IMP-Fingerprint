@@ -6,6 +6,7 @@
 ## from matplotlib.pyplot
 from matplotlib.pyplot import axes, imshow, colorbar, title, \
      savefig, close, figure
+from math import pi
 def show_pic(image,plot_name='Test Image',colourmap=None):
     """Method to simply shwo the image. Useful for tests"""
     figure(facecolor='white', figsize=(5,4))
@@ -232,7 +233,7 @@ def calAngle(y,x):
                 return pi/2
         else:
                 return arctan(y/x)
-def followRidge(tangents,cX,cY,mu=5):
+def followRidge(tangents,cX,cY,mu=5,angle_diff=pi/2):
         """Given an list of tangents and an input starting position, returns the list of points on a ridge"""
         #cX and cY stand for current x and current Y
         from numpy import shape,array,where,mean,amax
@@ -255,7 +256,7 @@ def followRidge(tangents,cX,cY,mu=5):
                         if visited[cX,cY]:
                                 break
                         visited[cX,cY] = True
-                        psi_s = angels[cX,cY] + pi/2
+                        psi_s = angels[cX,cY] + angle_diff
                         cX += round( cos(psi_s) * mu)
                         cY += round( sin(psi_s) * mu)
         usefulCords = where(visited==True)
