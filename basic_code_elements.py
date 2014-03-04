@@ -226,7 +226,10 @@ def OC_switch(window, threshold=0.1):
     return pc
 
 def followRidge(tangents,cX,cY,mu=5,angle_diff=pi/2):
-        """Given an list of tangents and an input starting position, returns the list of points on a ridge"""
+        """
+           Given an list of tangents and an input starting position,
+           returns the list of points on a ridge
+        """
         #tangents is a 2d array from atd
         #cX and cY are the co-ords of the starting location
         #mu is the number of pixels to move each step
@@ -241,24 +244,21 @@ def followRidge(tangents,cX,cY,mu=5,angle_diff=pi/2):
         #Initiate an array of False which is the same shape as the tangent image
         #This is used to check if a pixel has been visited
 
-        angels = angle( tangents[:,:,0] + 1j*tangents[:,:,1]) 
+        angels = angle( tangents[:,:,1] + 1j*tangents[:,:,0]) 
         #angels contains the angle of the tangent at each point.
         #It's calculated by creating a 2D array where the real part of each element
         #is the x co-ord and the imagenary the y co-ord. This is pased to numpy's angle
         #function.
 
-        while cX - 2 >= 0\
-                and cY - 2 >= 0\
-                and cX + 2 < xSize\
-                and cY + 2 < ySize\
-                and not visited[cX,cY]:
+        while cX - 2 >= 0 and cY - 2 >= 0 and cX + 2 < xSize\
+                and cY + 2 < ySize and not visited[cX,cY]:
                         #While in the image and the current pixel has not been visited...
                         visited[cX,cY] = True
                         #Set the current pixel to have been visited.
                         psi_s = angels[cX,cY] + angle_diff
                         #Find the angle at point (cX,cY)
-                        cX += round( cos(psi_s) * mu)
-                        cY += round( sin(psi_s) * mu)
+                        cX += round(cos(psi_s) * mu)
+                        cY += round(sin(psi_s) * mu)
                         #Move mu pixels foreward in direction psi_s
         usefulCords = where(visited==True)
         #Extact all positions where we have visited. This is the path of the ridge

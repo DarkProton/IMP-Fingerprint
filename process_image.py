@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import time
 
 def main():
-        CAL_TANGENTS = False
+        CAL_TANGENTS = True
         #If this is true, it will calculate the tangents. Otherwise, it will load them from tan.npy
 
         img = misc.imread('Images/arch.png').astype(float)
