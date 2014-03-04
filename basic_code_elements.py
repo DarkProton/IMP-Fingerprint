@@ -225,42 +225,92 @@ def OC_switch(window, threshold=0.1):
 
     return pc
 
-def followRidge(tangents,cX,cY,mu=5,angle_diff=pi/2):
-        """
-           Given an list of tangents and an input starting position,
-           returns the list of points on a ridge
-        """
-        #tangents is a 2d array from atd
-        #cX and cY are the co-ords of the starting location
-        #mu is the number of pixels to move each step
-        #angle_diff is the amount of radians to add to the calculated angle.
-        #The paper says 90 degress, hence that is the default.
-        from numpy import shape,array,where,mean,amax,angle
-        from math import cos, sin, pi
-        xSize,ySize,zSize  = shape(tangents)
-        #Get size of the image.
+def followRidge(tangents,cX,cY, img, mu=5,angle_diff=pi/2, rad=3):
+    """
+       Given an list of tangents and an input starting position,
+       returns the list of points on a ridge
+    """
+    from numpy import shape, array, where, mean, amax, angle, zeros, \
+                      argmin, mean
+    from math import cos, sin, pi
 
-        visited = array( [ [False] * ySize] * xSize )
-        #Initiate an array of False which is the same shape as the tangent image
-        #This is used to check if a pixel has been visited
+    # Get size of the image.
+    xSize, ySize, zSize  = shape(tangents)
 
-        angels = angle( tangents[:,:,1] + 1j*tangents[:,:,0]) 
-        #angels contains the angle of the tangent at each point.
-        #It's calculated by creating a 2D array where the real part of each element
-        #is the x co-ord and the imagenary the y co-ord. This is pased to numpy's angle
-        #function.
+    # Create array to hold wheather a pixel has been traversed
+    visited = array([[False]*ySize]*xSize)
 
-        while cX - 2 >= 0 and cY - 2 >= 0 and cX + 2 < xSize\
-                and cY + 2 < ySize and not visited[cX,cY]:
-                        #While in the image and the current pixel has not been visited...
-                        visited[cX,cY] = True
-                        #Set the current pixel to have been visited.
-                        psi_s = angels[cX,cY] + angle_diff
-                        #Find the angle at point (cX,cY)
-                        cX += round(cos(psi_s) * mu)
-                        cY += round(sin(psi_s) * mu)
-                        #Move mu pixels foreward in direction psi_s
-        usefulCords = where(visited==True)
-        #Extact all positions where we have visited. This is the path of the ridge
-        #In theory
-        return usefulCords
+    # Calculate angles
+    angels = angle(tangents[:,:,1] + 1j*tangents[:,:,0])
+
+    # Calculate line length
+    ll = rad*2+1
+
+    # Array for holding line greylevels, angles and coords
+    ang_line = zeros((ll,2))
+    grey_line = zeros(ll)
+    coord_line = zeros((ll,2))
+
+    # Set starting angle
+    psi_s = pi
+
+    while cX - 2 >= 0 and cY - 2 >= 0 and cX + 2 < xSize\
+        and cY + 2 < ySize and not visited[cX,cY]:
+            #While in the image and the current pixel has not been visited...
+
+            # Extract line for processing
+            for sig in range(-rad, rad+1):
+                # Calculate coords of pixels in line
+                lx = cX + round(sig*cos(psi_s))
+                ly = cY + round(sig*sin(psi_s))
+
+                # Extract greylevel of line
+                grey_line[sig+rad] = img[ly, lx]
+
+                # Store coordinates of pixels in line
+                coord_line[sig] = ly, lx
+
+            # Move to ridge peak in line
+            cY, cX = coord_line[argmin(grey_line)]
+
+            # Extract line for processing at new coords
+            for sig in range(-rad, rad+1):
+                # Calculate coords of pixels in line
+                lx = cX + round(sig*cos(psi_s))
+                ly = cY + round(sig*sin(psi_s))
+
+                # Extract angle
+                ang_line[sig+rad] = angels[ly, lx]
+
+                # Store coordinates of pixels in line
+                coord_line[sig] = ly, lx
+
+            # Extract greyscale tangent
+            ang1 = mean(ang_line[0:rad])
+            ang2 = mean(ang_line[rad+1:-1])
+
+            # Add/substract 90deg to minimise distance from phi_c
+            if abs(psi_s - ang1 - pi/2) < abs(psi_s - ang1 + pi/2):
+                ang1 += pi/2
+            else:
+                ang1 -= pi/2
+
+            if abs(psi_s - ang2 - pi/2) < abs(psi_s - ang2 + pi/2):
+                ang2 += pi/2
+            else:
+                ang2 -= pi/2
+
+            # Set 
+            psi_s = (ang1 + ang2)/2
+
+            # Move forward in the phi_s diraction
+            cX += round(cos(psi_s) * mu)
+            cY += round(sin(psi_s) * mu)
+
+            # Mark pixel was visited
+            visited[cX,cY] = True
+
+    usefulCords = where(visited==True)
+    #Extact all positions where we have visited. This is the path of the ridge
+    #In theory
+    return usefulCords
