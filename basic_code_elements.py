@@ -144,7 +144,8 @@ def atd(image, window=9):
                 u2 = 1
 
             # Plateau
-            elif A == B:
+            elif ((A+B) + sqrt((A-B)**2 + 4*C**2)) == \
+                  ((A+B) - sqrt((A-B)**2 + 4*C**2)):
                 u1 = 0
                 u2 = 0
 
