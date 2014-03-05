@@ -251,14 +251,18 @@ def followRidge(tangents,cX,cY, img, mu=5,rad=3):
     grey_line = zeros(ll)
     coord_line = zeros((ll,2))
 
-    # Set starting angle
+    # Set starting angl
     psi_s = pi
+
+    #Store points visited in order
+    usefulCords = []
 
     while cX - 2 >= 0 and cY - 2 >= 0 and cX + 2 < xSize\
         and cY + 2 < ySize and not visited[cX,cY]:
             #While in the image and the current pixel has not been visited...
 
             visited[cX,cY] = True
+            usefulCords.append( [cX,cY] )
             # Extract line for processing
             for sig in range(-rad, rad+1):
                 # Calculate coords of pixels in line
@@ -308,9 +312,26 @@ def followRidge(tangents,cX,cY, img, mu=5,rad=3):
             cX += round(cos(psi_s) * mu)
             cY += round(sin(psi_s) * mu)
 
-            # Mark pixel was visited
 
-    usefulCords = where(visited==True)
+   
     #Extact all positions where we have visited. This is the path of the ridge
-    #In theory
-    return usefulCords
+    return where(visited == True)
+
+def trimRidege(img,pointList,max_dGray=100):
+        """
+        Trims the ridge if there is too large a change in the gray level
+        """
+
+        for a in reverse(range(0,len(pointList))):
+                oldX = pointList[a][0]
+                oldY = pointList[a][1]
+                newX = pointList[a-1][0]
+                newY = pointList[a-1][1]
+                dGray = img[oldX,oldY] - img[newX,newY]
+                dGray = abs(dGray)
+
+                if dGray > max_dGray:
+                        return pointList[:a]
+        return pointList
+
+

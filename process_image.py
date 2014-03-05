@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import time
 
 def main():
-        CAL_TANGENTS = False
+        CAL_TANGENTS = True
         #If this is true, it will calculate the tangents. Otherwise, it will load them from tan.npy
 
         img = misc.imread('Images/Example_curve_n0.png').astype(float)
@@ -33,7 +33,11 @@ def main():
         #tx and ty are the locations where the ridge finding starts
 
 
-        rx, ry = basic.followRidge(tangents,tx,ty,img,mu=5,rad=10)
+        #usefulCords = basic.followRidge(tangents,tx,ty,img,mu=5,rad=10)
+        #rx = [x[0] for x in usefulCords]
+        #ry = [x[1] for x in usefulCords]
+
+        rx,ry = basic.followRidge(tangents,tx,ty,img,mu=5,rad=10)
         plt.plot(rx,ry,'b-')
 
         plt.imshow(img,interpolation='nearest',cmap=plt.get_cmap('gray'))
