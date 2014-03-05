@@ -225,7 +225,7 @@ def OC_switch(window, threshold=0.1):
 
     return pc
 
-def followRidge(tangents,cX,cY, img, mu=5,angle_diff=pi/2, rad=3):
+def followRidge(tangents,cX,cY, img, mu=5,rad=3):
     """
        Given an list of tangents and an input starting position,
        returns the list of points on a ridge
@@ -258,6 +258,7 @@ def followRidge(tangents,cX,cY, img, mu=5,angle_diff=pi/2, rad=3):
         and cY + 2 < ySize and not visited[cX,cY]:
             #While in the image and the current pixel has not been visited...
 
+            visited[cX,cY] = True
             # Extract line for processing
             for sig in range(-rad, rad+1):
                 # Calculate coords of pixels in line
@@ -308,7 +309,6 @@ def followRidge(tangents,cX,cY, img, mu=5,angle_diff=pi/2, rad=3):
             cY += round(sin(psi_s) * mu)
 
             # Mark pixel was visited
-            visited[cX,cY] = True
 
     usefulCords = where(visited==True)
     #Extact all positions where we have visited. This is the path of the ridge
