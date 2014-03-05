@@ -82,10 +82,10 @@ def pnd(image):
     # Loop through and calculate the normal vector
     for n in range(1, y_pix):
         for m in range(1, x_pix):
-            n1 = (-image[n, m] + image[n-1, m] + image[n-1, m-1] \
-                  - image[n, m-1])/4
-            n2 = (-image[n, m] - image[n-1, m] + image[n-1, m-1] \
-                  + image[n, m-1])/4
+            n1 = (-image[n-1, m] + image[n-1, m-1] + image[n, m-1] \
+                  - image[n, m])/4
+            n2 = (-image[n-1, m] - image[n-1, m-1] + image[n, m-1] \
+                  + image[n, m])/4
 
             normals[n-1, m-1, :] = n1, n2
 
@@ -94,9 +94,9 @@ def pnd(image):
     return normals
 
 ## Uses zeros, sum, sqrt from numpy
-def atd(image, window=9):
+def atd(image, window=3):
     """Returns the averaged tangent diraction of a normal array"""
-    from numpy import zeros, sum, sqrt, array
+    from numpy import zeros, sum, sqrt, array, mean, sign
     # Get image dimensions
     y_pix = len(image)
     x_pix = len(image[0])
@@ -133,6 +133,7 @@ def atd(image, window=9):
             A = sum(window[:,0]**2)
             B = sum(window[:,1]**2)
             C = sum(window[:,0]*window[:,1])
+            mn1 = mean(window[:,0])
 
             # Diagonal matrix case
             if C == 0 and A < B:
@@ -144,14 +145,23 @@ def atd(image, window=9):
                 u2 = 1
 
             # Plateau
-            elif A == B:
+            elif ((A+B) + sqrt((A-B)**2 + 4*C**2)) == \
+                  ((A+B) - sqrt((A-B)**2 + 4*C**2)):
                 u1 = 0
                 u2 = 0
 
             # Non-diagonal case
             else:
-                D = (B - A)/(2*C) - sqrt(1 + ((B - A)/(2*C))**2) 
-                u1 = 1/sqrt(1 + D**2)
+                D = (B - A)/(2*C) - sqrt(1 + ((B - A)/(2*C))**2)
+##                u1 = 1/sqrt(1 + u2**2)
+##                u2 = D/sqrt(1 + u2**2)
+
+                # Ensure that u1 points in the correct direction
+                if mn1 > 0:
+                    u1 = 1/sqrt(1 + D**2)
+                else:
+                    u1 = -1/sqrt(1 + D**2)
+                    
                 u2 = u1*D
 
             tangents[n,m,:] = u1, u2
@@ -225,7 +235,7 @@ def OC_switch(window, threshold=0.1):
 
     return pc
 
-def followRidge(tangents,cX,cY, img, mu=5,angle_diff=pi/2, rad=3):
+def followRidge(tangents, cX, cY, img, mu=5, rad=3):
     """
        Given an list of tangents and an input starting position,
        returns the list of points on a ridge
@@ -235,10 +245,11 @@ def followRidge(tangents,cX,cY, img, mu=5,angle_diff=pi/2, rad=3):
     from math import cos, sin, pi
 
     # Get size of the image.
-    xSize, ySize, zSize  = shape(tangents)
+    ySize, xSize, zSize  = shape(tangents)
 
     # Create array to hold wheather a pixel has been traversed
     visited = array([[False]*ySize]*xSize)
+    double_visied = array([[False]*ySize]*xSize)
 
     # Calculate angles
     angels = angle(tangents[:,:,1] + 1j*tangents[:,:,0])
@@ -249,20 +260,27 @@ def followRidge(tangents,cX,cY, img, mu=5,angle_diff=pi/2, rad=3):
     # Array for holding line greylevels, angles and coords
     ang_line = zeros((ll,2))
     grey_line = zeros(ll)
-    coord_line = zeros((ll,2))
+    coord_line = zeros((ll,2)).astype('int')
 
     # Set starting angle
-    psi_s = pi
+    psi_s = -pi/2
 
-    while cX - 2 >= 0 and cY - 2 >= 0 and cX + 2 < xSize\
-        and cY + 2 < ySize and not visited[cX,cY]:
+    uC = []
+
+    print("Image size:", xSize, ySize)
+
+    while cX - rad - mu >= 0 and cY - rad - mu >= 0 and cX + rad + mu < xSize\
+        and cY + rad + mu < ySize and not visited[cX,cY]:
             #While in the image and the current pixel has not been visited...
+
+            # Mark current pixel as visited
+            visited[cX,cY] = True
 
             # Extract line for processing
             for sig in range(-rad, rad+1):
                 # Calculate coords of pixels in line
-                lx = cX + round(sig*cos(psi_s))
-                ly = cY + round(sig*sin(psi_s))
+                lx = cX + round(sig*cos(psi_s + pi/2))
+                ly = cY + round(sig*sin(psi_s + pi/2))
 
                 # Extract greylevel of line
                 grey_line[sig+rad] = img[ly, lx]
@@ -276,18 +294,25 @@ def followRidge(tangents,cX,cY, img, mu=5,angle_diff=pi/2, rad=3):
             # Extract line for processing at new coords
             for sig in range(-rad, rad+1):
                 # Calculate coords of pixels in line
-                lx = cX + round(sig*cos(psi_s))
-                ly = cY + round(sig*sin(psi_s))
+                lx = cX + round(sig*cos(psi_s + pi/2))
+                ly = cY + round(sig*sin(psi_s + pi/2))
+                if sum(tangents[ly,lx]) == 0:
+                    continue
+
+                    
 
                 # Extract angle
                 ang_line[sig+rad] = angels[ly, lx]
 
                 # Store coordinates of pixels in line
                 coord_line[sig] = ly, lx
-
             # Extract greyscale tangent
-            ang1 = mean(ang_line[0:rad])
-            ang2 = mean(ang_line[rad+1:-1])
+            ang1 = mean(ang_line[0:rad][not 0])
+
+            
+            ang2 = mean(ang_line[rad+1:-1][not 0])
+
+            
 
             # Add/substract 90deg to minimise distance from phi_c
             if abs(psi_s - ang1 - pi/2) < abs(psi_s - ang1 + pi/2):
@@ -306,11 +331,10 @@ def followRidge(tangents,cX,cY, img, mu=5,angle_diff=pi/2, rad=3):
             # Move forward in the phi_s diraction
             cX += round(cos(psi_s) * mu)
             cY += round(sin(psi_s) * mu)
-
-            # Mark pixel was visited
-            visited[cX,cY] = True
+            print("New coords:", cX, cY)
+            uC.append( [cX,cY] )
 
     usefulCords = where(visited==True)
     #Extact all positions where we have visited. This is the path of the ridge
     #In theory
-    return usefulCords
+    return uC

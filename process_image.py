@@ -10,33 +10,33 @@ def main():
         CAL_TANGENTS = False
         #If this is true, it will calculate the tangents. Otherwise, it will load them from tan.npy
 
-        img = misc.imread('Images/arch.png').astype(float)
+        img = misc.imread('Images/fingerprint5.png').astype(float)
         xSize , ySize = np.shape(img)
         #Load in the image and get its size.
 
         if CAL_TANGENTS:
-                tangents = basic.atd(img,3)
+                tangents = basic.pnd(img)
                 np.save('tan.npy',tangents)
-                print ('Tangents calculated and save')
+                print ('Tangents calculated and saved')
         else:
                 tangents = np.load('tan.npy')
                 print('Tangents loaded')
 
-        plt.figure()
-        plt.imshow(img,interpolation='nearest',cmap=plt.get_cmap('gray'))
-        plt.quiver(tangents[:,:,0][::5], tangents[:,:,1][::5],
-                   pivot='mid', color='r', units='width')
-        plt.show()
+##        plt.figure()
+##        plt.imshow(img,interpolation='none',cmap=plt.get_cmap('gray'))
+##        plt.quiver(tangents[:,:,0], tangents[:,:,1],
+##                   pivot='mid', color='r', units='inches', scale=1.2)
+##        plt.show()
         
-        tx = 209
-        ty = 53
+        tx = 850
+        ty = 1190
         #tx and ty are the locations where the ridge finding starts
 
-
-        for angle_offset in [-np.pi/2,0,np.pi/2]:
-                #For all the angle offsets, calculate and plot the ridge
-                rx, ry = basic.followRidge(tangents,tx,ty,img,1,angle_offset)
-                plt.plot(rx,ry,'b-')
+        
+        oC= basic.followRidge(tangents, tx, ty, img, mu=1, rad=30)
+        rx = [x[0] for x in oC]
+        ry = [x[1] for x in oC]
+        plt.plot(rx,ry,'b-')
 
         plt.imshow(img,interpolation='nearest',cmap=plt.get_cmap('gray'))
         #Show the image
