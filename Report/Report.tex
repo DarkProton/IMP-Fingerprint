@@ -213,11 +213,30 @@
 
 In the algorithm employed here a more simplistic (and not as noise tolerant) method that simply finds the darkest point in the line. This method is vulnerable to local minima due to noise and has no way of coping with plateau ridges.
 
-		Calculating $\phi_c$ is trivial but demands that some care to be taken. Using the results of the PND or ATD functions one can easily determine 
+		Calculating $\phi_c$ is trivial but demands that some care to be taken. Using the result of the PND or ATD functions one can easily determine the angle of the greylevel tangent and add or subtract $pi/2$ from the angles to get $\phi_c$. In the algorithim implemented here the two possible values of $\phi_c$ are compared to the old value of $\phi_c$ and the one with the smallest difference is chosen.
 
-\section{Experimental Procedure}
+		Moving forward is trivial. Using basic trigonometry one can see that the following is true:
+
+		\begin{equation}
+			\begin{pmatrix}
+			x_{c+1} \\
+			y_{c+1}
+			\end{pmatrix}
+			=
+			\begin{pmatrix}
+			x_c \\
+			y_c
+			\end{pmatrix}
+			+ \mu
+			\begin{pmatrix}
+			\cos{\phi_c} \\
+			\sin{\phi_c}
+			\end{pmatrix}
+		\end{equation}
 
 \section{Results \& Analysis}
+
+	\subsection{PND function}
 
 \section{Conclusion}
 
