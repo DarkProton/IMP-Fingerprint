@@ -161,10 +161,10 @@ Stuff happened.
 
 		In implementing these equations several special cases have to be taken into account. The first special case is when $C = 0$, which would require deviding by zero. To cope with this case the function is set to test if $C = 0$ and if so the function will set $(u_1, u_2) = (1,0)$ or $(u_1, u_2) = (0,1)$ depending on weather $A < B$ or $B > A$ respectively. The second special case is  when $\lambda_1 = \lambda_2$, which the function tests for after determining if $C = 0$. In this case there is no optimum orientations thus $(u_1, u_2) = (0,0)$.
 
-		A final problem with implementing equation \eqref{eq:ATD_u} is the fact that $u_1$ can only ever be positive. This ensures that in the $x$--direction one cannot distunguish between the two sides edges of a ridge. To solve this the function calculates the mean of the $n_1$ values then checks if this mean is negative and if so it makes $u_1$ negative.
+		A final problem with implementing equation \eqref{eq:ATD_u} is the fact that $u_1$ can only ever be positive. This ensures that in the $x$--direction one cannot distinguish between the two sides edges of a ridge. To solve this the function calculates the mean of the $n_1$ values then checks if this mean is negative and if so it makes $u_1$ negative.
 
 	\subsection{The Ridge Follower}
-		The ridge following system takes a slice (of width $2 \sigma + 1$) of the image 
+		The ridge following system takes a slice (of width $2 \sigma + 1$ and height 1 pixel centred around pixel $(x_c, y_c)$) of the image, finds the peak of the ridge and moves to it, calculates the direction of the ridge then moves forward by $\mu$ pixels before starting the process again (figure \ref{fig:ridge_follow_simpled}). In this manor the ridge follower follows the ridge, and since the function logs where it's been it's possible to determine where the minutiae are.
 
 \begin{figurehere}
 \centering
@@ -172,6 +172,11 @@ Stuff happened.
 \caption{Simple version of the ridge following algorithm.}
 \label{fig:ridge_follow_simpled}
 \end{figurehere}
+
+		Taking a line at a given point is simple enough: the current pixel, $(x_c, y_c)$, is the centre of the line and by simple trig the coordinates of the pixels that make up the line are
+
+		\begin{equation}
+			
 
 \section{Experimental Procedure}
 
