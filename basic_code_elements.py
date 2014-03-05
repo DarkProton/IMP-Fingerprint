@@ -265,7 +265,7 @@ def followRidge(tangents, cX, cY, img, mu=5, rad=3):
     # Set starting angle
     psi_s = -pi/2
 
-    uC = []
+    uC = [[cX,cY]]
 
     print("Image size:", xSize, ySize)
 
@@ -332,7 +332,7 @@ def followRidge(tangents, cX, cY, img, mu=5, rad=3):
             cX += round(cos(psi_s) * mu)
             cY += round(sin(psi_s) * mu)
             print("New coords:", cX, cY)
-            uC.append( [cX,cY] )
+            uC.append([cX,cY])
 
     usefulCords = where(visited==True)
     #Extact all positions where we have visited. This is the path of the ridge
