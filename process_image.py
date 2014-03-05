@@ -7,10 +7,10 @@ import matplotlib.pyplot as plt
 import time
 
 def main():
-        CAL_TANGENTS = False
+        CAL_TANGENTS = True
         #If this is true, it will calculate the tangents. Otherwise, it will load them from tan.npy
 
-        img = misc.imread('Images/fingerprint5.png').astype(float)
+        img = misc.imread('Images/Example_curve_n0.png').astype(float)
         xSize , ySize = np.shape(img)
         #Load in the image and get its size.
 
@@ -28,12 +28,12 @@ def main():
 ##                   pivot='mid', color='r', units='inches', scale=1.2)
 ##        plt.show()
         
-        tx = 850
-        ty = 1190
+        tx = 140
+        ty = 110
         #tx and ty are the locations where the ridge finding starts
 
         
-        oC= basic.followRidge(tangents, tx, ty, img, mu=1, rad=30)
+        oC= basic.followRidge(tangents, tx, ty, img, mu=1, rad=50)
         rx = [x[0] for x in oC]
         ry = [x[1] for x in oC]
         plt.plot(rx,ry,'b-')

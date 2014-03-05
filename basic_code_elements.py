@@ -263,7 +263,7 @@ def followRidge(tangents, cX, cY, img, mu=5, rad=3):
     coord_line = zeros((ll,2)).astype('int')
 
     # Set starting angle
-    psi_s = -pi/2
+    psi_s = pi/2
 
     uC = [[cX,cY]]
 
@@ -291,28 +291,36 @@ def followRidge(tangents, cX, cY, img, mu=5, rad=3):
             # Move to ridge peak in line
             cY, cX = coord_line[argmin(grey_line)]
 
+            # Reset line angle counters and angles
+            ang_c1 = 0
+            ang1 = 0
+            ang_c2 = 0
+            ang2 = 0
+
             # Extract line for processing at new coords
             for sig in range(-rad, rad+1):
                 # Calculate coords of pixels in line
                 lx = cX + round(sig*cos(psi_s + pi/2))
                 ly = cY + round(sig*sin(psi_s + pi/2))
-                if sum(tangents[ly,lx]) == 0:
-                    continue
-
-                    
+##                if sum(tangents[ly,lx]) == 0:
+##                    continue
 
                 # Extract angle
-                ang_line[sig+rad] = angels[ly, lx]
+                if sig < rad and tangents[ly,lx,0] != 0 and \
+                   tangents[ly,lx,1] != 0:
+                    ang1 += angels[ly, lx]
+                    ang_c1 += 1
+                elif sig > rad + 1 and tangents[ly,lx,0] != 0 and \
+                   tangents[ly,lx,1] != 0:
+                    ang2 += angels[ly, lx]
+                    ang_c2 += 1
 
                 # Store coordinates of pixels in line
                 coord_line[sig] = ly, lx
-            # Extract greyscale tangent
-            ang1 = mean(ang_line[0:rad][not 0])
-
-            
-            ang2 = mean(ang_line[rad+1:-1][not 0])
-
-            
+                
+            # Calculate greyscale tangent
+            ang1 = ang1/ang_c1
+            ang2 = ang2/ang_c2
 
             # Add/substract 90deg to minimise distance from phi_c
             if abs(psi_s - ang1 - pi/2) < abs(psi_s - ang1 + pi/2):
