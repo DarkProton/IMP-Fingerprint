@@ -209,10 +209,11 @@
 
 		where $x_{l,k}$ is $x$--coordinate of the $k$\textsuperscript{th} pixel of the line \textit{e.t.c.} and $k$ ranges from zero to $2 \sigma + 1$. Using these coordinates one can extract the relevant greylevels and plane normals.
 
-		Identifying the peak of the ridge is somewhat involved if noise tolerance is needed. One method is to find the point midway between the two angles that are closest to the end of the lines. Another method is to try and smooth out the ridge to ensure that there is just one peak in it. 
+		Identifying the peak of the ridge is somewhat involved if noise tolerance is needed. One method is to find the point midway between the two angles that are closest to the end of the lines. Another method is to try and smooth out the ridge to ensure that there is just one peak in it - by taking the average of a line in front of and behind the current point then convolving along the line with a Gaussian mask one can effectively find the `weak' maxima of the ridge. This weak maxima may not be the actual centre of the ridge but it should be near enough.
 
-In the algorithm employed here a more simplistic (and not as noise tolerant) method that simply finds the darkest point in the line.
-			
+In the algorithm employed here a more simplistic (and not as noise tolerant) method that simply finds the darkest point in the line. This method is vulnerable to local minima due to noise and has no way of coping with plateau ridges.
+
+		Calculating $\phi_c$ is trivial but demands that some care to be taken. Using the results of the PND or ATD functions one can easily determine 
 
 \section{Experimental Procedure}
 
