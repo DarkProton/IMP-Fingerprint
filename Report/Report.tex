@@ -9,47 +9,54 @@
 \usepackage{multicol}
 \usepackage{letltxmacro}
 \usepackage{listings}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
 
 %\addbibresource[location=remote]{C:/Users/CptProton/Documents/Bibliographies/Labs.bib}
 
 \LetLtxMacro{\oldsqrt}{\sqrt} % makes all sqrts closed
 \renewcommand{\sqrt}[1][]{%
   \def\DHLindex{#1}\mathpalette\DHLhksqrt}
-\def\DHLhksqrt#1#2{%
-  \setbox0=\hbox{$#1\oldsqrt[\DHLindex]{#2\,}$}\dimen0=\ht0
-  \advance\dimen0-0.2\ht0
-  \setbox2=\hbox{\vrule height\ht0 depth -\dimen0}%
-  {\box0\lower0.71pt\box2}}
+  \def\DHLhksqrt#1#2{%
+    \setbox0=\hbox{$#1\oldsqrt[\DHLindex]{#2\,}$}\dimen0=\ht0
+    \advance\dimen0-0.2\ht0
+    \setbox2=\hbox{\vrule height\ht0 depth -\dimen0}%
+    {\box0\lower0.71pt\box2}}
 
-\makeatletter
-\newenvironment{tablehere}
-  {\def\@captype{table}}
-  {}
+    \makeatletter
+    \newenvironment{tablehere}
+    {\def\@captype{table}}
+    {}
 
-\newenvironment{figurehere}
-  {\def\@captype{figure}}
-  {}
-\makeatother
+    \newenvironment{figurehere}
+    {\def\@captype{figure}}
+    {}
+    \makeatother
 
-\title{Automatic Fingerprint Recognition}
-\author{Benjamin May \& Edward Wastell}
+    \title{Automatic Fingerprint Recognition}
+    \author{Benjamin May \& Edward Wastell}
 %\date{}
 
-\begin{document}
-\maketitle
+    \begin{document}
+    \maketitle
 
-\begin{abstract}
-Stuff happened.
-\end{abstract}
+    \begin{abstract}
+      Stuff happened.
+    \end{abstract}
 
-\begin{multicols}{2}
+    \begin{multicols}{2}
 
 \section{Introduction}
 	Fingerprints have been used to identify people since the 19\textsuperscript{th} century and have been used in criminal investigations since about that time. More recently fingerprints have been used as biometric markers used in boarder control, library stock control and computer and building access control systems. The need for a robust automatic fingerprint recognition system is obvious.
 
 	Most fingerprint recognition systems in use are based on the idea of identifying minutiae (points where a ridge ends or joins with another ridge) --- in this article a system that uses the greylevel gradient to find minutiae is discussed.
 
+        Traditionally, fingerprint analysis consisted of first processing the image in some way, usually either binarization or line thinning. Methods like this have two major drawbacks. Firstly, such alterations to the image can be computationally expensive and therefore take a considerable amount of time for large images, which is a serious problem when used in real time applications. Secondly, non-reversible image manipulation can lead to destruction of information about the fingerprint.
+
+
 \section{Theory and Implementation}
+
+        The method used in the article does not rely on prior image manipulation. It works by think of the image as a three dimensional object, with the greylevel of time image being the height in the Z-direction. The tangent of this object is then calculated at the position of each pixel in the image. A line can then be traced along the image by taking steps in the direction orthogonal to these tangents. By building up such lines from different starting points in the image, we can classify the entirety of the fingerprint. The two types of minutia we are looking for can be found from this complete classification. Where a line ends without touching another line or the edge of the image is a termination and points where one line hits the middle of another are bifurcations.
+
 
 	\subsection{Point Normal Direction}
 \begin{figure*}
