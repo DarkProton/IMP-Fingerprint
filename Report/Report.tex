@@ -177,7 +177,7 @@
 		A final problem with implementing equation \eqref{eq:ATD_u} is the fact that $u_1$ can only ever be positive. This ensures that in the $x$--direction one cannot distinguish between the two sides edges of a ridge. To solve this the function calculates the mean of the $n_1$ values then checks if this mean is negative and if so it makes $u_1$ negative.
 
 	\subsection{The Ridge Follower}
-		The ridge following system takes a slice (of width $2 \sigma + 1$ and height 1 pixel centred around pixel $(x_c, y_c)$) of the image, finds the peak of the ridge and moves to it, calculates the direction of the ridge then moves forward by $\mu$ pixels before starting the process again (figure \ref{fig:ridge_follow_simpled}). In this manor the ridge follower follows the ridge, and since the function logs where it's been it's possible to determine where the minutiae are.
+		The ridge following system takes a slice (of width $2 \sigma + 1$ and height 1 pixel centred around pixel $(x_c, y_c)$) of the image, finds the peak of the ridge and moves to it, calculates the direction of the ridge ($\phi_c$) then moves forward by $\mu$ pixels before starting the process again (figure \ref{fig:ridge_follow_simpled}). In this manor the ridge follower follows the ridge, and since the function logs where it's been it's possible to determine where the minutiae are.
 
 \begin{figurehere}
 \centering
@@ -189,6 +189,29 @@
 		Taking a line at a given point is simple enough: the current pixel, $(x_c, y_c)$, is the centre of the line and by simple trig the coordinates of the pixels that make up the line are
 
 		\begin{equation}
+		\begin{split}
+			\begin{pmatrix}
+			x_{l,k} \\
+			y_{l,k}
+			\end{pmatrix}
+			= \\
+			\begin{pmatrix}
+			x_c \\
+			y_c
+			\end{pmatrix}
+			+ (k - \sigma)
+			\begin{pmatrix}
+			\cos{(\phi_c + \pi/2)} \\
+			\sin{(\phi_c + \pi/2)}
+			\end{pmatrix}
+		\end{split}
+		\end{equation}
+
+		where $x_{l,k}$ is $x$--coordinate of the $k$\textsuperscript{th} pixel of the line \textit{e.t.c.} and $k$ ranges from zero to $2 \sigma + 1$. Using these coordinates one can extract the relevant greylevels and plane normals.
+
+		Identifying the peak of the ridge is somewhat involved if noise tolerance is needed. One method is to find the point midway between the two angles that are closest to the end of the lines. Another method is to try and smooth out the ridge to ensure that there is just one peak in it. 
+
+In the algorithm employed here a more simplistic (and not as noise tolerant) method that simply finds the darkest point in the line.
 			
 
 \section{Experimental Procedure}
