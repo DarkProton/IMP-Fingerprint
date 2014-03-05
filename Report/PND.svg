@@ -40,10 +40,10 @@
      inkscape:window-height="706"
      id="namedview330"
      showgrid="false"
-     inkscape:zoom="0.50477461"
+     inkscape:zoom="1.0095492"
      inkscape:cx="608.67057"
      inkscape:cy="271.85593"
-     inkscape:window-x="1272"
+     inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2"
@@ -337,7 +337,7 @@
      id="g188"
      transform="matrix(1,0,0,0.9386138,-3.6806267,12.540822)">
     <line
-       style="fill:none;stroke:#000000;stroke-width:2.06436515"
+       style="fill:none;stroke:#000000;stroke-width:2.06436515000000000"
        x1="362.95901"
        y1="159.66701"
        x2="362.95999"
@@ -348,7 +348,7 @@
        points="367.96,184.098 362.96,194.099 357.96,184.099 362.96,186.599 "
        id="polygon192" />
     <polygon
-       style="fill:none;stroke:#000000;stroke-width:2.06436515"
+       style="fill:none;stroke:#000000;stroke-width:2.06436515000000000"
        points="362.96,194.099 357.96,184.099 362.96,186.599 367.96,184.098 "
        id="polygon194" />
   </g>
@@ -593,7 +593,7 @@
   </g>
   <text
      xml:space="preserve"
-     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
      x="95.810387"
      y="164.98499"
      id="text3311"
@@ -604,7 +604,7 @@
        y="164.98499">Start</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
      x="96.488991"
      y="226.96329"
      id="text3319"
@@ -617,10 +617,10 @@
        x="96.488991"
        y="243.5381"
        id="tspan3323"
-       style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text">image</tspan></text>
+       style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Serif Bold">image</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
      x="96.588753"
      y="302.96564"
      id="text3330"
@@ -629,16 +629,16 @@
        x="96.588753"
        y="302.96564"
        id="tspan3334"
-       style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text">y_len, x_len =</tspan><tspan
+       style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Serif Bold">y_len, x_len =</tspan><tspan
        sodipodi:role="line"
        x="96.588753"
        y="320.25751"
        id="tspan3338"><tspan
-   style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+   style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Serif Bold"
    id="tspan3345">image</tspan> size</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
      x="96.49762"
      y="393.10443"
      id="text3353"
@@ -647,15 +647,15 @@
        id="tspan3355"
        x="100.05627"
        y="393.10443"><tspan
-         style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+         style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Serif Bold"
          id="tspan3365">normals = </tspan></tspan><tspan
        sodipodi:role="line"
        x="96.49762"
        y="410.3963"
        id="tspan3357">(<tspan
-   style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+   style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Serif Bold"
    id="tspan3363">y_len</tspan> × <tspan
-   style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+   style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Serif Bold"
    id="tspan3361">x_len</tspan>)</tspan><tspan
        sodipodi:role="line"
        x="96.49762"
@@ -663,7 +663,7 @@
        id="tspan3359">array of zeros</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
      x="359.32803"
      y="147.69945"
      id="text3367"
@@ -672,11 +672,11 @@
        id="tspan3369"
        x="359.32803"
        y="147.69945"><tspan
-   style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+   style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Serif Bold"
    id="tspan3371">m</tspan> = 1</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+     style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Serif Bold"
      x="359.2016"
      y="237.10106"
      id="text3377"
@@ -691,7 +691,7 @@
        id="tspan3381">y_len</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+     style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Serif Bold"
      x="254.34908"
      y="334.09659"
      id="text3388"
@@ -700,11 +700,11 @@
        id="tspan3390"
        x="254.34908"
        y="334.09659">m <tspan
-   style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+   style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
    id="tspan3411">+= 1</tspan></tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
      x="359.12943"
      y="335.59949"
      id="text3405"
@@ -713,11 +713,11 @@
        id="tspan3407"
        x="359.12943"
        y="335.59949"><tspan
-   style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+   style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Serif Bold"
    id="tspan3409">n</tspan> = 1</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+     style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Serif Bold"
      x="359.19534"
      y="423.49185"
      id="text3377-1"
@@ -732,7 +732,7 @@
        id="tspan3381-4">x_len</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
      x="280.01715"
      y="426.43677"
      id="text3437"
@@ -743,7 +743,7 @@
        y="426.43677">True</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
      x="406.10391"
      y="408.02121"
      id="text3441"
@@ -754,29 +754,29 @@
        y="408.02121">False</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
-     x="385.53937"
-     y="290.2464"
+     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     x="405.66718"
+     y="221.47643"
      id="text3437-0"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan3439-9"
-       x="385.53937"
-       y="290.2464">True</tspan></text>
+       x="405.66718"
+       y="221.47643">True</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
-     x="407.48608"
-     y="222.80774"
+     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     x="392.94934"
+     y="287.66397"
      id="text3441-4"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan3443-8"
-       x="407.48608"
-       y="222.80774">False</tspan></text>
+       x="392.94934"
+       y="287.66397">False</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
      x="528.94934"
      y="185.42641"
      id="text3472"
@@ -785,11 +785,11 @@
        id="tspan3474"
        x="528.94934"
        y="185.42641"><tspan
-   style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+   style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Serif Bold"
    id="tspan3476">n1</tspan> = ...</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
      x="528.94934"
      y="278.42645"
      id="text3472-8"
@@ -798,11 +798,11 @@
        id="tspan3474-2"
        x="528.94934"
        y="278.42645"><tspan
-   style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+   style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Serif Bold"
    id="tspan3476-4">n2</tspan> = ...</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
      x="529.76959"
      y="361.74973"
      id="text3512"
@@ -811,18 +811,18 @@
        id="tspan3514"
        x="529.76959"
        y="361.74973"
-       style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text">normals[n,m,:]</tspan><tspan
+       style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Serif Bold">normals[n,m,:]</tspan><tspan
        sodipodi:role="line"
        x="529.76959"
        y="379.0416"
        id="tspan3516">= <tspan
-   style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+   style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Serif Bold"
    id="tspan3518">n1</tspan>, <tspan
-   style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+   style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Serif Bold"
    id="tspan3520">n2</tspan></tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+     style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Serif Bold"
      x="528.32043"
      y="446.19659"
      id="text3388-5"
@@ -831,13 +831,13 @@
        id="tspan3390-5"
        x="528.32043"
        y="446.19659"><tspan
-         style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+         style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
          id="tspan3411-1"><tspan
-   style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text"
+   style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Serif Bold"
    id="tspan3555">n</tspan> += 1</tspan></tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
      x="668.76953"
      y="188.23927"
      id="text3557"
@@ -850,10 +850,10 @@
        x="668.76953"
        y="204.81409"
        id="tspan3561"
-       style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text">normals</tspan></text>
+       style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Serif Bold">normals</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
      x="669.08118"
      y="273.74875"
      id="text3570"
@@ -866,10 +866,10 @@
        x="669.08118"
        y="290.32355"
        id="tspan3574"
-       style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Typewriter Text">normals</tspan></text>
+       style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CMU Typewriter Text;-inkscape-font-specification:CMU Serif Bold">normals</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:13.54666615px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif"
+     style="font-size:13.54666615000000000px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
      x="668.37024"
      y="373.80521"
      id="text3581"
