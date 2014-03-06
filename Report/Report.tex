@@ -235,8 +235,30 @@ In the algorithm employed here a more simplistic (and not as noise tolerant) met
 		\end{equation}
 
 \section{Results \& Analysis}
+	In order to test the various functions we use several images, shown in figure \ref{fig:ex_img}
+
+			\begin{figure*}
+				\centering
+				\subfloat[Simple wide curve.]{\label{fig:Example_curve_n0}
+					\includegraphics[width = 0.45\textwidth]{../Example_curve_n0}} \qquad
+				\subfloat[Simple wide curve with noise added.]{\label{fig:Example_curve_n50}
+					\includegraphics[width = 0.45\textwidth]{Example_curve_n50}} \\
+				\subfloat[Distinct droplets.]{\label{fig:layer-droplet-c}
+					\includegraphics[width = 0.45\textwidth]{layer-droplet-c}}
+\qquad
+				\subfloat[Separated patches.]{\label{fig:layer-droplet-d}
+					\includegraphics[width = 0.45\textwidth]{layer-droplet-d}}
+				\caption{Four possible ways that IL can deposit onto a surface.}
+				\label{fig:layer-droplet}
+			\end{figure*}
 
 	\subsection{PND function}
+        \begin{figurehere}
+        \centering
+        \includegraphics[width = 0.48\textwidth]{PND_test_zoom}
+        \caption{Vectors correctly extracted from a simple greyscale image.}
+        \label{fig:PND_test_zoom}
+      \end{figurehere}
 
 \section{Conclusion}
 
