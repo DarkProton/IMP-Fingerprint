@@ -213,6 +213,8 @@
 
 In the algorithm employed here a more simplistic (and not as noise tolerant) method that simply finds the darkest point in the line.
 			
+\subsection{Minutia Detection}
+        Once a complete set of ridges for the image has been found, the individual minutia can be defined. There are two types of minutia that we are interested in: terminations and bifurcations. Terminations occur where the end of a line is not at the edge of the image. This is failly simple to detect: if a ridge ends and is more that $\mu$ pixels away from the edge of an image this will be a termination point.
 
 \section{Experimental Procedure}
 
