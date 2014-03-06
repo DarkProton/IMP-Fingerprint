@@ -55,6 +55,7 @@
 
 \section{Theory and Implementation}
 
+
         The method used in the article does not rely on prior image manipulation. It works by think of the image as a three dimensional object, with the greylevel of time image being the height in the Z-direction. The tangent of this object is then calculated at the position of each pixel in the image. A line can then be traced along the image by taking steps in the direction orthogonal to these tangents. By building up such lines from different starting points in the image, we can classify the entirety of the fingerprint. The two types of minutia we are looking for can be found from this complete classification. Where a line ends without touching another line or the edge of the image is a termination and points where one line hits the middle of another are bifurcations.
 
 
@@ -65,6 +66,7 @@
 \caption{Flow chart of the PND function as implemented.}
 \label{fig:PND-alg}
 \end{figure*}
+
 
 		The point normal function works by taking four mutually adjacent points (\textit{i.e.} a $2 \times 2$ array of pixels) and fitting a plane to them. If the greylevel at the pixel $(x_k, y_k)$ is denoted $h_k$ and the level from the fitted plane is denoted $p_k$ then the plane fitting part of the function can be seen as minimising the following expression:
 
@@ -214,7 +216,15 @@
 In the algorithm employed here a more simplistic (and not as noise tolerant) method that simply finds the darkest point in the line.
 			
 \subsection{Minutia Detection}
-        Once a complete set of ridges for the image has been found, the individual minutia can be defined. There are two types of minutia that we are interested in: terminations and bifurcations. Terminations occur where the end of a line is not at the edge of the image. This is failly simple to detect: if a ridge ends and is more that $\mu$ pixels away from the edge of an image this will be a termination point.
+        Once a complete set of ridges for the image has been found, the individual minutia can be defined. There are two types of minutia that we are interested in: terminations and bifurcations. Terminations occur where the end of a line is not at the edge of the image. This is fairly simple to detect: if a ridge ends and is more that $\mu$ pixels away from the edge of an image this will be a termination point. A bifurcation is when a single line splits into two lines. Attempting to find when a line splits can be difficult, as our ridge following algorithm will only follow one of two lines. However, it should be obvious that a line meeting the middle of another line is equivalent to a line branching. As the ridge following algorithm terminates if it finds an already visited pixel, it is possible to find positions where bifurcation may occur by looking at terminations. For each such point, we can extend the ridge follower by one more step. If this new point is already registered to another line, we can count this point as a bifurcation instead of a termination.
+
+        If we know the location of all points of minutia and their type, we can in theory check whether two fingerprints are the same. Although it has not been proved that fingerprint minutia is sufficient to differentiate individuals, no two people have ever been found who have the same fingerprint minutia. There are a number of advantages to comparing a list of minutia as opposed to doing the same with a collection of images, the first of which is space. Although modern computers can store many high resolution images, a relatively small list of points is several orders of magnitudes smaller. The second reason is accuracy. It is unlikely that two pictures of fingerprints are exactly the same - there are many ways small errors in image acquisition can occur. If using exact picture matching, some on the fly processing must happen to get different images to be comparable, which can loose some information. Lastly, minutia matching should be faster. 
+        \begin{figure*}
+          \centering
+          \includegraphics[width = \textwidth]{minutia.pdf}
+          \caption{Flow chart for minutia detection. This is applied to the end of each ridge found.}
+          \label{fig:min-alg}
+        \end{figure*}
 
 \section{Experimental Procedure}
 
