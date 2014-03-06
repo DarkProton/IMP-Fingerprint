@@ -260,7 +260,7 @@ def followRidge(tangents, cX, cY, img, mu=5, rad=3):
     coord_line = zeros((ll,2)).astype('int')
 
     # Set starting angle
-    psi_s = pi/2
+    psi_s = pi/4
 
     uC = [[cX,cY]]
 
@@ -299,15 +299,13 @@ def followRidge(tangents, cX, cY, img, mu=5, rad=3):
                 # Calculate coords of pixels in line
                 lx = cX + round(sig*cos(psi_s + pi/2))
                 ly = cY + round(sig*sin(psi_s + pi/2))
-##                if sum(tangents[ly,lx]) == 0:
-##                    continue
 
                 # Extract angle
-                if sig < rad and tangents[ly,lx,0] != 0 and \
+                if sig < 0 and tangents[ly,lx,0] != 0 and \
                    tangents[ly,lx,1] != 0:
                     ang1 += angels[ly, lx]
                     ang_c1 += 1
-                elif sig > rad + 1 and tangents[ly,lx,0] != 0 and \
+                elif sig > 0 and tangents[ly,lx,0] != 0 and \
                    tangents[ly,lx,1] != 0:
                     ang2 += angels[ly, lx]
                     ang_c2 += 1
@@ -316,8 +314,15 @@ def followRidge(tangents, cX, cY, img, mu=5, rad=3):
                 coord_line[sig] = ly, lx
                 
             # Calculate greyscale tangent
-            ang1 = ang1/ang_c1
-            ang2 = ang2/ang_c2
+            if ang_c1:
+                ang1 = ang1/ang_c1
+            else:
+                ang1 = psi_s
+
+            if ang_c2:
+                ang2 = ang2/ang_c2
+            else:
+                ang2 = psi_s
 
             # Add/substract 90deg to minimise distance from phi_c
             if abs(psi_s - ang1 - pi/2) < abs(psi_s - ang1 + pi/2):
