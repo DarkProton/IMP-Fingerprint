@@ -253,17 +253,44 @@ In the algorithm employed here a more simplistic (and not as noise tolerant) met
 			\end{figure*}
 
 	\subsection{The PND function}
-        \begin{figurehere}
-        \centering
-        \includegraphics[width = 0.48\textwidth]{PND_test_zoom}
-        \caption{Vectors correctly extracted from a section of figure \ref{fig:Example_curve_n0}.}
-        \label{fig:PND_test_zoom}
-      \end{figurehere}
+			\begin{figure*}
+				\centering
+				\subfloat[Simple wide curve.]{\label{fig:PND_Example_curve_n0}
+					\includegraphics[width = 0.48\textwidth]{PND_Example_curve_n0}} \;
+				\subfloat[Simple wide curve with noise added.]{\label{fig:PND_Example_curve_n50}
+					\includegraphics[width = 0.48\textwidth]{PND_Example_curve_n50}} \\
+				\subfloat[Scan of a real fingerprint.]{\label{fig:PND_arch}
+					\includegraphics[width = 0.48\textwidth]{PND_arch}}
+\;
+				\subfloat[Computer generated fingerprint.]{\label{fig:PND_fingerprint5_small}
+					\includegraphics[width = 0.48\textwidth]{PND_fingerprint5_small}}
+				\caption{Sections of the example images after the PND function has been applied.}
+				\label{fig:PND_img}
+			\end{figure*}
 
-		As can be seen in figure \ref{fig:PND_test_zoom} the PND function does correctly calculate surface normals for a noise free image. It should be noted that in the system developed here black represents a low pixel value while white is high (as is standard for greyscale images). If PND is applied to \ref{fig:Example_curve_n50} the result is not as satisfactory
+		As can be seen in figures \ref{fig:PND_Example_curve_n0} and \ref{fig:PND_fingerprint5_small} the PND function does correctly calculate surface normals for a noise free image. It should be noted that in the system developed here black represents a low pixel value while white is high (as is standard for greyscale images), hence the normals point towards the black regions rather than away.
+
+		If PND is applied to \ref{fig:Example_curve_n50} however, result is not as satisfactory (figure \ref{fig:PND_Example_curve_n50}). The point normals at the edge of the line do point towatds the line however as the PND function has no way of smothing out noise vectors scatter the image like mines in a playground\footnote{By which I mean that the mines are unwelcome and would mame children if not delt with}. In the case of scan of a real fingerprint the noise does not seam to have been an issue. Some normals are incorrectly angled but most are pointing in the right direction.
+
+		Overall it appears that on it's own the PND function can cope with some smudging and blured images as long as the ridges are still present but cannot cope with white noise, especally if the image has well sparsed ridges and large monochromatic areas.
 
 	\subsection{The ATD Function}
-		The results of the ATD function are not as encouraging. The primary problem lies with the system that determines how the various cases should be dealt with.
+			\begin{figure*}
+				\centering
+				\subfloat[Simple wide curve.]{\label{fig:ATD_Example_curve_n0_5}
+					\includegraphics[width = 0.48\textwidth]{ATD_Example_curve_n0_5}} \;
+				\subfloat[Simple wide curve with noise added.]{\label{fig:ATD_Example_curve_n50_5}
+					\includegraphics[width = 0.48\textwidth]{ATD_Example_curve_n50_5}} \\
+				\subfloat[Scan of a real fingerprint.]{\label{fig:ATD_arch_5}
+					\includegraphics[width = 0.48\textwidth]{ATD_arch_5}}
+\;
+				\subfloat[Computer generated fingerprint.]{\label{fig:ATD_fingerprint5_small_5}
+					\includegraphics[width = 0.48\textwidth]{ATD_fingerprint5_small_5}}
+				\caption{Sections of the example images after the PND function has been applied.}
+				\label{fig:ATD_img}
+			\end{figure*}
+
+		The results of the ATD function are not as encouraging. The primary problem appears lies with the system that determines how the various cases should be dealt with.
 
 	\subsection{The Ridge Follower}
 		The results here are more encouraging - for noise free images the ridge follower is able to follow a reasonably line but it transpires that 
