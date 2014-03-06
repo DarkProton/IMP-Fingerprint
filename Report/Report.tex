@@ -235,30 +235,32 @@ In the algorithm employed here a more simplistic (and not as noise tolerant) met
 		\end{equation}
 
 \section{Results \& Analysis}
-	In order to test the various functions we use several images, shown in figure \ref{fig:ex_img}
+	In order to test the various functions we use several images, shown in figure \ref{fig:ex_img}. Each of these images present their own challenges: \ref{fig:Example_curve_n0}, \ref{fig:Example_curve_n50} and \ref{fig:fingerprint5} all have quite wide ridges that plateau while \ref{fig:Example_curve_n50} and \ref{fig:arch} both have significant levels of noise that, if not properly dealt with, could easily lead to the ridge follower missing the true path of a ridge.
 
 			\begin{figure*}
 				\centering
 				\subfloat[Simple wide curve.]{\label{fig:Example_curve_n0}
-					\includegraphics[width = 0.45\textwidth]{../Example_curve_n0}} \qquad
+					\includegraphics[width = 0.45\textwidth]{../Images/Example_curve_n0}} \qquad
 				\subfloat[Simple wide curve with noise added.]{\label{fig:Example_curve_n50}
-					\includegraphics[width = 0.45\textwidth]{Example_curve_n50}} \\
-				\subfloat[Distinct droplets.]{\label{fig:layer-droplet-c}
-					\includegraphics[width = 0.45\textwidth]{layer-droplet-c}}
+					\includegraphics[width = 0.45\textwidth]{../Images/Example_curve_n50}} \\
+				\subfloat[Scan of a real fingerprint.]{\label{fig:arch}
+					\includegraphics[width = 0.45\textwidth]{../Images/arch}}
 \qquad
-				\subfloat[Separated patches.]{\label{fig:layer-droplet-d}
-					\includegraphics[width = 0.45\textwidth]{layer-droplet-d}}
-				\caption{Four possible ways that IL can deposit onto a surface.}
-				\label{fig:layer-droplet}
+				\subfloat[Computer generated fingerprint.]{\label{fig:fingerprint5}
+					\includegraphics[width = 0.45\textwidth]{../Images/fingerprint5}}
+				\caption{Example images used to test the functions written.}
+				\label{fig:ex_img}
 			\end{figure*}
 
 	\subsection{PND function}
         \begin{figurehere}
         \centering
         \includegraphics[width = 0.48\textwidth]{PND_test_zoom}
-        \caption{Vectors correctly extracted from a simple greyscale image.}
+        \caption{Vectors correctly extracted from a section of figure \ref{fig:Example_curve_n0}.}
         \label{fig:PND_test_zoom}
       \end{figurehere}
+
+		As can be seen in figure \ref{fig:PND_test_zoom} the PND function does correctly calculate surface normals for a noise free image. It should be noted that in the system developed here black represents a low pixel value while white is high (as is standard for greyscale images). If PND is applied to \ref{fig:Example_curve_n50} 
 
 \section{Conclusion}
 
