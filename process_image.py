@@ -6,27 +6,23 @@ import numpy as np
 import matplotlib.pyplot as plt
 import time
 
-def main():
-        CAL_TANGENTS = True
-        #If this is true, it will calculate the tangents. Otherwise, it will load them from tan.npy
-
-        img = misc.imread('Images/Example_curve_n0.png').astype(float)
+def main():#'fingerprint5_small''Example_curve_n0', 'Example_curve_n50', 
+    for n in range(4):
+        files = ('arch','x')
+        img = misc.imread('Images/'+files[n]+'.png').astype(float)
         xSize , ySize = np.shape(img)
         #Load in the image and get its size.
 
-        if CAL_TANGENTS:
-                tangents = basic.pnd(img)
-                np.save('tan.npy',tangents)
-                print ('Tangents calculated and saved')
-        else:
-                tangents = np.load('tan.npy')
-                print('Tangents loaded')
+        tangents = basic.atd(img)
 
         plt.figure()
-        plt.imshow(img,interpolation='none',cmap=plt.get_cmap('gray'))
-        plt.quiver(tangents[:,:,0], tangents[:,:,1],
+        plt.imshow(img[0:25,50:100], interpolation='none', \
+                   cmap=plt.get_cmap('gray'))
+        plt.quiver(tangents[0:25,50:100,0], tangents[0:25,50:100,1],
                    pivot='mid', color='r', units='inches', scale=5)
-        plt.show()
+        #plt.show()
+        plt.savefig('PND_'+files[n]+'.svg')
+        print('Figure', 'PND_'+files[n]+'.svg', 'saved.')
 ##        
 ##        tx = 140
 ##        ty = 110
