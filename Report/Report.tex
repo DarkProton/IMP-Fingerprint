@@ -252,7 +252,7 @@ In the algorithm employed here a more simplistic (and not as noise tolerant) met
 				\label{fig:ex_img}
 			\end{figure*}
 
-	\subsection{PND function}
+	\subsection{The PND function}
         \begin{figurehere}
         \centering
         \includegraphics[width = 0.48\textwidth]{PND_test_zoom}
@@ -261,6 +261,12 @@ In the algorithm employed here a more simplistic (and not as noise tolerant) met
       \end{figurehere}
 
 		As can be seen in figure \ref{fig:PND_test_zoom} the PND function does correctly calculate surface normals for a noise free image. It should be noted that in the system developed here black represents a low pixel value while white is high (as is standard for greyscale images). If PND is applied to \ref{fig:Example_curve_n50} the result is not as satisfactory
+
+	\subsection{The ATD Function}
+		The results of the ATD function are not as encouraging. The primary problem lies with the system that determines how the various cases should be dealt with.
+
+	\subsection{The Ridge Follower}
+		The results here are more encouraging - for noise free images the ridge follower is able to follow a reasonably line but it transpires that 
 
 \section{Conclusion}
 
