@@ -286,17 +286,26 @@ In the algorithm employed here a more simplistic (and not as noise tolerant) met
 \;
 				\subfloat[Computer generated fingerprint.]{\label{fig:ATD_fingerprint5_small_5}
 					\includegraphics[width = 0.48\textwidth]{ATD_fingerprint5_small_5}}
-				\caption{Sections of the example images after the PND function has been applied.}
+				\caption{Sections of the example images after the ATD function has been applied with a window size of 5.}
 				\label{fig:ATD_img}
 			\end{figure*}
 
-		The results of the ATD function are not as encouraging. The primary problem appears lies with the system that determines how the various cases should be dealt with.
+		The results of the ATD function are not as encouraging as the PND results. Looking at figures \ref{fig:ATD_Example_curve_n0_5} and \ref{fig:ATD_fingerprint5_small_5} we can see that the function has spread the normals of the edges into regions that had no normal from the PND function (which is as expected) but most critically for certain sections the function calculates the direction of some of the vectors wrong. This appears to happen for sections that are nearly horizontal but is probably not due to the function incorrectly picking the case where $(u_1, u_2) = (0, 1)$, which can be seen the vectors pointing in opposing directions on opposite sides of the line. The bug may be due to a floating point error but at the time of writing the exact nature of the bug is unknown.
+
+		For white noise the ATD function does not appear to help. Both the random noise normals and the actual edge normals have been merged, though a line correctly oriented normals does remain (ignoring the sections where the above mentioned malfunction occurs). For the real fingerprint the ATD function does seam to have improved the situation, with the normals in the blurred sections becoming properly oriented. If a larger window is used on this image, figure \ref{fig:ATD_arch_15}, one can see the effect of over smoothing the normals --- in the sections that are blurred the over smoothing had set all normals to the same direction. Setting the ATD window too large also appears to eliminate some of the ridges which again isn't surprising.
+
+\begin{figurehere}
+\centering
+\includegraphics[width = 0.48\textwidth]{ATD_arch_15}
+\caption{The result of applying the ATD function to the real fingerprint with window size of 15.}
+\label{fig:ATD_arch_15}
+\end{figurehere}
 
 	\subsection{The Ridge Follower}
 		The results here are more encouraging - for noise free images the ridge follower is able to follow a reasonably line but it transpires that 
 
 \section{Conclusion}
-
+	At functioning system for computing the plane normal directions of a greyscale has been written and on testing was found to work well.
 
 \printbibliography
 \end{multicols}
