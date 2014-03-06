@@ -22,30 +22,31 @@ def main():
                 tangents = np.load('tan.npy')
                 print('Tangents loaded')
 
-##        plt.figure()
-##        plt.imshow(img,interpolation='none',cmap=plt.get_cmap('gray'))
-##        plt.quiver(tangents[:,:,0], tangents[:,:,1],
-##                   pivot='mid', color='r', units='inches', scale=1.2)
-##        plt.show()
-        
-        tx = 140
-        ty = 110
-        #tx and ty are the locations where the ridge finding starts
-
-        
-        oC= basic.followRidge(tangents, tx, ty, img, mu=1, rad=50)
-        rx = [x[0] for x in oC]
-        ry = [x[1] for x in oC]
-        plt.plot(rx,ry,'b-')
-
-        plt.imshow(img,interpolation='nearest',cmap=plt.get_cmap('gray'))
-        #Show the image
-
-        plt.plot([tx], [ty],'ro')
-        #Plot where the ridge finding starts
-
-
+        plt.figure()
+        plt.imshow(img,interpolation='none',cmap=plt.get_cmap('gray'))
+        plt.quiver(tangents[:,:,0], tangents[:,:,1],
+                   pivot='mid', color='r', units='inches', scale=5)
         plt.show()
-        #Show image
+##        
+##        tx = 140
+##        ty = 110
+##        #tx and ty are the locations where the ridge finding starts
+##
+##        
+##        oC= basic.followRidge(tangents, tx, ty, img, mu=1, rad=50)
+##        rx = [x[0] for x in oC]
+##        ry = [x[1] for x in oC]
+##        plt.plot(rx,ry,'b-')
+##
+##        plt.imshow(img,interpolation='nearest',cmap=plt.get_cmap('gray'))
+##        #Show the image
+##
+##        plt.plot([tx], [ty],'ro')
+##        #Plot where the ridge finding starts
+##
+##
+##        plt.show()
+##        #Show image
+
 if __name__ == '__main__':
         main()
