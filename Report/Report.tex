@@ -305,7 +305,7 @@ In the algorithm employed here a more simplistic (and not as noise tolerant) met
 		The results here are more encouraging - for noise free images the ridge follower is able to follow a reasonably line but it transpires that 
 
 \section{Conclusion}
-	At functioning system for computing the plane normal directions of a greyscale has been written and on testing was found to work well.
+	A functioning system for computing the plane normal directions of a greyscale has been written and on testing was found to work well. This PND function has no way of dealing with noise hence a second function, the averaged tangent direction function, is necessary. On images with large uniform areas and white noise the ATD function is of little use however when tested with real fingerprints this is not a problem. It is found that when selecting the size of the window used by the ATD function it is important to not select a size that over smooths the normals.
 
 \printbibliography
 \end{multicols}
