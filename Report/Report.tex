@@ -5,13 +5,14 @@
 \usepackage{amsmath}
 \usepackage{makeidx}
 \usepackage{graphicx}
-\usepackage[bibstyle=numeric, citestyle=numeric-comp]{biblatex}
+\usepackage[bibstyle=numeric, citestyle=numeric-comp, backend=bibtex, sorting=none, url=false, isbn=false, eprint=false, autocite=superscript]{biblatex}
 \usepackage{multicol}
 \usepackage{letltxmacro}
 \usepackage{listings}
-\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\usepackage[english]{isodate}
+\usepackage[colorlinks=true,hyperfootnotes=false,citecolor=blue]{hyperref}
 
-%\addbibresource[location=remote]{C:/Users/CptProton/Documents/Bibliographies/Labs.bib}
+\addbibresource{Report_Papers.bib}
 
 \LetLtxMacro{\oldsqrt}{\sqrt} % makes all sqrts closed
 \renewcommand{\sqrt}[1][]{%
@@ -34,7 +35,7 @@
 
     \title{Automatic Fingerprint Recognition}
     \author{Benjamin May \& Edward Wastell}
-%\date{}
+	\date{}
 
     \begin{document}
     \maketitle
@@ -48,19 +49,17 @@
 \section{Introduction}
 	Fingerprints have been used to identify people since the 19\textsuperscript{th} century and have been used in criminal investigations since about that time. More recently fingerprints have been used as biometric markers used in boarder control, library stock control and computer and building access control systems. The need for a robust automatic fingerprint recognition system is obvious.
 
-        If fingerprints are to be used in a modern setting, a method to rapidly compare different fingerprints is needed. This obviosuly requires some form of algorthim that can be run on a computer. The niave approach would be to simply calculate the total peicewise difference between two different images; if this value is below a certain threshold we can say the images are the same and hence belong to the same person. However, this system would have almost no tolerance for error. If the image was distorted, captured with different method or machine, or the finger was simply rotated this will give a false mismatch. Conversely, if the image is sufficiently low quality images would look more similar and false matches would be common. In theory, there is an operation that would process the image in such a way that this would be possible, it turns out that there is a far simpler way.
+        If fingerprints are to be used in a modern setting, a method to rapidly compare different fingerprints is needed. This obviously requires some form of algorithm that can be run on a computer. The naive approach would be to simply calculate the total piecewise difference between two different images; if this value is below a certain threshold we can say the images are the same and hence belong to the same person. However, this system would have almost no tolerance for error. If the image was distorted, captured with different method or machine, or the finger was simply rotated this will give a false mismatch. Conversely, if the image is sufficiently low quality images would look more similar and false matches would be common. In theory, there is an operation that would process the image in such a way that this would be possible, it turns out that there is a far simpler way.
 
-        Fingerprints can be classified by a collection of features called minutia. These are features of how the induvidual ridges of the fingerprint pattern behaves. Any point where a line halts and is not at the edge of a region is a termination, and any point where a ridge splits in two is a bifurcation. By knowing the location and nature of all minutia of a fingerprint it is thought to be possible say whether two fingerprints are the same: this fact has not been proved but no instance of two people having the same set of minutia. There are a number of advantages to comparing a list of minutia as opposed to doing the same with a collection of images, the first of which is space. Although modern computers can store many high resolution images, a relatively small list of points is several orders of magnitudes smaller. The second reason is accuracy. It is unlikely that two pictures of fingerprints are exactly the same - there are many ways small errors in image acquisition can occur. If using exact picture matching, some on the fly processing must happen to get different images to be comparable, which can loose some information. Lastly, minutia matching should be faster.
+        Fingerprints can be classified by a collection of features called minutia\supercite{ANSI}. These are features of how the individual ridges of the fingerprint pattern behaves. Any point where a line halts and is not at the edge of a region is a termination, and any point where a ridge splits in two is a bifurcation. By knowing the location and nature of all minutia of a fingerprint it is thought to be possible say whether two fingerprints are the same: this fact has not been proved but no instance of two people having the same set of minutia. There are a number of advantages to comparing a list of minutia as opposed to doing the same with a collection of images, the first of which is space. Although modern computers can store many high resolution images, a relatively small list of points is several orders of magnitudes smaller. The second reason is accuracy. It is unlikely that two pictures of fingerprints are exactly the same - there are many ways small errors in image acquisition can occur. If using exact picture matching, some on the fly processing must happen to get different images to be comparable, which can loose some information. Lastly, minutia matching should be faster.
 
 
-        Traditionally, fingerprint analysis consisted of first processing the image in some way, usually either binarization or line thinning. Methods like this have two major drawbacks. Firstly, such alterations to the image can be computationally expensive and therefore take a considerable amount of time for large images, which is a serious problem when used in real time applications. Secondly, non-reversible image manipulation can lead to destruction of information about the fingerprint. In this article, we aim to implement a method for following a series of ridges, such as those found in fingerprints, and show how this could be applied to minutia extraction.
+        Traditionally, fingerprint analysis consisted of first processing the image in some way, usually either binarisation\supercite{Moayer} or line thinning. Methods like this have two major drawbacks. Firstly, such alterations to the image can be computationally expensive and therefore take a considerable amount of time for large images, which is a serious problem when used in real time applications. Secondly, non-reversible image manipulation can lead to destruction of information about the fingerprint. In this article, we aim to implement a method for following a series of ridges, such as those found in fingerprints, and show how this could be applied to minutia extraction.
 
 
 
 \section{Theory and Implementation}
-
-
-        The method used in the article does not rely on prior image manipulation. It works by think of the image as a three dimensional object, with the greylevel of time image being the height in the Z-direction. The tangent of this object is then calculated at the position of each pixel in the image. A line can then be traced along the image by taking steps in the direction orthogonal to these tangents. By building up such lines from different starting points in the image, we can classify the entirety of the fingerprint. The two types of minutia we are looking for can be found from this complete classification. Where a line ends without touching another line or the edge of the image is a termination and points where one line hits the middle of another are bifurcations.
+        The method used in the article does not rely on prior image manipulation. It works by think of the image as a three dimensional object, with the greylevel of time image being the height in the Z-direction. The tangent of this object is then calculated at the position of each pixel in the image. A line can then be traced along the image by taking steps in the direction orthogonal to these tangents. By building up such lines from different starting points in the image, we can classify the entirety of the fingerprint. The two types of minutia we are looking for can be found from this complete classification. Where a line ends without touching another line or the edge of the image is a termination and points where one line hits the middle of another are bifurcations. The work in this article is based on work by Donahue and Rokhlin\supercite{Donahue} and expanded by Maio and Maltone\supercite{Maio}.
 
 
 	\subsection{Point Normal Direction}
@@ -78,7 +77,7 @@
 			\min_{n_1, n_2, c} \sum_k |h_k - p_k|^2
 		\end{equation}
 		
-		Which in matrix form can be expresed as:
+		Which in matrix form can be expressed as:
 
 		\begin{equation}
 			\begin{vmatrix}
@@ -120,7 +119,7 @@
 	\subsection{Averaged Tangent Direction}
         \begin{figure*}
         \centering
-        \includegraphics[width = \textwidth]{ATD.pdf}
+        \includegraphics[width = \textwidth]{ATD}
         \caption{Flow chart of the ATD function as implemented.}
         \label{fig:ATD-alg}
       \end{figure*}
@@ -178,7 +177,7 @@
 			u_2 = u_1 \left(\frac{\lambda_2 - A}{C}\right)
 		\end{equation}
 
-		In implementing these equations several special cases have to be taken into account. The first special case is when $C = 0$, which would require deviding by zero. To cope with this case the function is set to test if $C = 0$ and if so the function will set $(u_1, u_2) = (1,0)$ or $(u_1, u_2) = (0,1)$ depending on weather $A < B$ or $B > A$ respectively. The second special case is  when $\lambda_1 = \lambda_2$, which the function tests for after determining if $C = 0$. In this case there is no optimum orientations thus $(u_1, u_2) = (0,0)$.
+		In implementing these equations several special cases have to be taken into account. The first special case is when $C = 0$, which would require dividing by zero. To cope with this case the function is set to test if $C = 0$ and if so the function will set $(u_1, u_2) = (1,0)$ or $(u_1, u_2) = (0,1)$ depending on weather $A < B$ or $B > A$ respectively. The second special case is  when $\lambda_1 = \lambda_2$, which the function tests for after determining if $C = 0$. In this case there is no optimum orientations thus $(u_1, u_2) = (0,0)$.
 
 		A final problem with implementing equation \eqref{eq:ATD_u} is the fact that $u_1$ can only ever be positive. This ensures that in the $x$--direction one cannot distinguish between the two sides edges of a ridge. To solve this the function calculates the mean of the $n_1$ values then checks if this mean is negative and if so it makes $u_1$ negative.
 
@@ -215,26 +214,9 @@
 
 		where $x_{l,k}$ is $x$--coordinate of the $k$\textsuperscript{th} pixel of the line \textit{e.t.c.} and $k$ ranges from zero to $2 \sigma + 1$. Using these coordinates one can extract the relevant greylevels and plane normals.
 
-		Identifying the peak of the ridge is somewhat involved if noise tolerance is needed. One method is to find the point midway between the two angles that are closest to the end of the lines. Another method is to try and smooth out the ridge to ensure that there is just one peak in it - by taking the average of a line in front of and behind the current point then convolving along the line with a Gaussian mask one can effectively find the `weak' maxima of the ridge. This weak maxima may not be the actual centre of the ridge but it should be near enough.
+		Identifying the peak of the ridge is somewhat involved if noise tolerance is needed. One method is to find the point midway between the two angles that are closest to the end of the lines. Another method is to try and smooth out the ridge to ensure that there is just one peak in it - by taking the average of a line in front of and behind the current point then convolving along the line with a Gaussian mask one can effectively find the `weak' maxima of the ridge. This weak maxima may not be the actual centre of the ridge but it should be near enough. In the algorithm employed here a more simplistic (and not as noise tolerant) method that simply finds the darkest point in the line. This method is vulnerable to local minima due to noise and has no way of coping with plateau ridges.
 
-<<<<<<< HEAD
-In the algorithm employed here a more simplistic (and not as noise tolerant) method that simply finds the darkest point in the line.
-			
-\subsection{Minutia Detection}
-        Once a complete set of ridges for the image has been found, the individual minutia can be defined. There are two types of minutia that we are interested in: terminations and bifurcations. Terminations occur where the end of a line is not at the edge of the image. This is fairly simple to detect: if a ridge ends and is more that $\mu$ pixels away from the edge of an image this will be a termination point. A bifurcation is when a single line splits into two lines. Attempting to find when a line splits can be difficult, as our ridge following algorithm will only follow one of two lines. However, it should be obvious that a line meeting the middle of another line is equivalent to a line branching. As the ridge following algorithm terminates if it finds an already visited pixel, it is possible to find positions where bifurcation may occur by looking at terminations. For each such point, we can extend the ridge follower by one more step. If this new point is already registered to another line, we can count this point as a bifurcation instead of a termination.
-
-        If we know the location of all points of minutia and their type, we can in theory check whether two fingerprints are the same. Although it has not been proved that fingerprint minutia is sufficient to differentiate individuals, no two people have ever been found who have the same fingerprint minutia. If one was to use the absolute position of each point relative to the image's co-ordinate system, one would encounter some problems similar to direct image comparisons, namely that if the image was scaled or rotated a false mismatch would be reported. However, if you where to store the relative positions of the minutia to each other, this problem would be reduced. The distance between points can be scaled to account for differences in size of separate images and the set of points can be rotated round an arbitrary point to account for rotational problems. This would require some process to find the correct values for rotation and scaling, but investigation into this is beyond the scope of this article.
-        \begin{figure*}
-          \centering
-          \includegraphics[width = \textwidth]{minutia.pdf}
-          \caption{Flow chart for minutia detection. This is applied to the end of each ridge found.}
-          \label{fig:min-alg}
-        \end{figure*}
-=======
-In the algorithm employed here a more simplistic (and not as noise tolerant) method that simply finds the darkest point in the line. This method is vulnerable to local minima due to noise and has no way of coping with plateau ridges.
->>>>>>> 6110efd04b8e6ed4c2f8a538333b96240d462ab8
-
-		Calculating $\phi_c$ is trivial but demands that some care to be taken. Using the result of the PND or ATD functions one can easily determine the angle of the greylevel tangent and add or subtract $pi/2$ from the angles to get $\phi_c$. In the algorithim implemented here the two possible values of $\phi_c$ are compared to the old value of $\phi_c$ and the one with the smallest difference is chosen.
+		Calculating $\phi_c$ is trivial but demands that some care to be taken. Using the result of the PND or ATD functions one can easily determine the angle of the greylevel tangent and add or subtract $pi/2$ from the angles to get $\phi_c$. In the algorithm implemented here the two possible values of $\phi_c$ are compared to the old value of $\phi_c$ and the one with the smallest difference is chosen.
 
 		Moving forward is trivial. Using basic trigonometry one can see that the following is true:
 
@@ -254,6 +236,17 @@ In the algorithm employed here a more simplistic (and not as noise tolerant) met
 			\sin{\phi_c}
 			\end{pmatrix}
 		\end{equation}
+
+	\subsection{Minutia Detection}
+        Once a complete set of ridges for the image has been found, the individual minutia can be defined. There are two types of minutia that we are interested in: terminations and bifurcations. Terminations occur where the end of a line is not at the edge of the image. This is fairly simple to detect: if a ridge ends and is more that $\mu$ pixels away from the edge of an image this will be a termination point. A bifurcation is when a single line splits into two lines. Attempting to find when a line splits can be difficult, as our ridge following algorithm will only follow one of two lines. However, it should be obvious that a line meeting the middle of another line is equivalent to a line branching. As the ridge following algorithm terminates if it finds an already visited pixel, it is possible to find positions where bifurcation may occur by looking at terminations. For each such point, we can extend the ridge follower by one more step. If this new point is already registered to another line, we can count this point as a bifurcation instead of a termination.
+
+        If we know the location of all points of minutia and their type, we can in theory check whether two fingerprints are the same. Although it has not been proved that fingerprint minutia is sufficient to differentiate individuals, no two people have ever been found who have the same fingerprint minutia. If one was to use the absolute position of each point relative to the image's co-ordinate system, one would encounter some problems similar to direct image comparisons, namely that if the image was scaled or rotated a false mismatch would be reported. However, if you where to store the relative positions of the minutia to each other, this problem would be reduced. The distance between points can be scaled to account for differences in size of separate images and the set of points can be rotated round an arbitrary point to account for rotational problems. This would require some process to find the correct values for rotation and scaling, but investigation into this is beyond the scope of this article.
+        \begin{figure*}
+          \centering
+          \includegraphics[width = \textwidth]{minutia}
+          \caption{Flow chart for minutia detection. This is applied to the end of each ridge found.}
+          \label{fig:min-alg}
+        \end{figure*}
 
 \section{Results \& Analysis}
 	In order to test the various functions we use several images, shown in figure \ref{fig:ex_img}. Each of these images present their own challenges: \ref{fig:Example_curve_n0}, \ref{fig:Example_curve_n50} and \ref{fig:fingerprint5} all have quite wide ridges that plateau while \ref{fig:Example_curve_n50} and \ref{fig:arch} both have significant levels of noise that, if not properly dealt with, could easily lead to the ridge follower missing the true path of a ridge.
@@ -291,9 +284,9 @@ In the algorithm employed here a more simplistic (and not as noise tolerant) met
 
 		As can be seen in figures \ref{fig:PND_Example_curve_n0} and \ref{fig:PND_fingerprint5_small} the PND function does correctly calculate surface normals for a noise free image. It should be noted that in the system developed here black represents a low pixel value while white is high (as is standard for greyscale images), hence the normals point towards the black regions rather than away.
 
-		If PND is applied to \ref{fig:Example_curve_n50} however, result is not as satisfactory (figure \ref{fig:PND_Example_curve_n50}). The point normals at the edge of the line do point towatds the line however as the PND function has no way of smothing out noise vectors scatter the image like mines in a playground\footnote{By which I mean that the mines are unwelcome and would mame children if not delt with}. In the case of scan of a real fingerprint the noise does not seam to have been an issue. Some normals are incorrectly angled but most are pointing in the right direction.
+		If PND is applied to \ref{fig:Example_curve_n50} however, result is not as satisfactory (figure \ref{fig:PND_Example_curve_n50}). The point normals at the edge of the line do point towards the line however as the PND function has no way of smoothing out noise vectors scatter the image like mines in a playground\footnote{By which I mean that the mines are unwelcome and would maime children if not dealt with}. In the case of scan of a real fingerprint the noise does not seam to have been an issue. Some normals are incorrectly angled but most are pointing in the right direction.
 
-		Overall it appears that on it's own the PND function can cope with some smudging and blured images as long as the ridges are still present but cannot cope with white noise, especally if the image has well sparsed ridges and large monochromatic areas.
+		Overall it appears that on it's own the PND function can cope with some smudging and blurred images as long as the ridges are still present but cannot cope with white noise, especially if the image has sparse ridges and large monochromatic areas.
 
 	\subsection{The ATD Function}
 			\begin{figure*}
@@ -338,7 +331,10 @@ In the algorithm employed here a more simplistic (and not as noise tolerant) met
 \section{Conclusion}
 	A functioning system for computing the plane normal directions of a greyscale has been written and on testing was found to work well. This PND function has no way of dealing with noise hence a second function, the averaged tangent direction function, is necessary. On images with large uniform areas and white noise the ATD function is of little use however when tested with real fingerprints this is not a problem. It is found that when selecting the size of the window used by the ATD function it is important to not select a size that over smooths the normals.
 
-\printbibliography
+	An attempt at implementing a ridge following algorithm was made however the attempt failed, in part because of the fault in the ATD function but also due to a flow in the way that the function calculates the direction it should go in.
+
+\section{References}
+\printbibliography[heading=none]
 \end{multicols}
 
 \appendix
