@@ -215,8 +215,9 @@
 
 		where $x_{l,k}$ is $x$--coordinate of the $k$\textsuperscript{th} pixel of the line \textit{e.t.c.} and $k$ ranges from zero to $2 \sigma + 1$. Using these coordinates one can extract the relevant greylevels and plane normals.
 
-		Identifying the peak of the ridge is somewhat involved if noise tolerance is needed. One method is to find the point midway between the two angles that are closest to the end of the lines. Another method is to try and smooth out the ridge to ensure that there is just one peak in it. 
+		Identifying the peak of the ridge is somewhat involved if noise tolerance is needed. One method is to find the point midway between the two angles that are closest to the end of the lines. Another method is to try and smooth out the ridge to ensure that there is just one peak in it - by taking the average of a line in front of and behind the current point then convolving along the line with a Gaussian mask one can effectively find the `weak' maxima of the ridge. This weak maxima may not be the actual centre of the ridge but it should be near enough.
 
+<<<<<<< HEAD
 In the algorithm employed here a more simplistic (and not as noise tolerant) method that simply finds the darkest point in the line.
 			
 \subsection{Minutia Detection}
@@ -229,13 +230,113 @@ In the algorithm employed here a more simplistic (and not as noise tolerant) met
           \caption{Flow chart for minutia detection. This is applied to the end of each ridge found.}
           \label{fig:min-alg}
         \end{figure*}
+=======
+In the algorithm employed here a more simplistic (and not as noise tolerant) method that simply finds the darkest point in the line. This method is vulnerable to local minima due to noise and has no way of coping with plateau ridges.
+>>>>>>> 6110efd04b8e6ed4c2f8a538333b96240d462ab8
 
-\section{Experimental Procedure}
+		Calculating $\phi_c$ is trivial but demands that some care to be taken. Using the result of the PND or ATD functions one can easily determine the angle of the greylevel tangent and add or subtract $pi/2$ from the angles to get $\phi_c$. In the algorithim implemented here the two possible values of $\phi_c$ are compared to the old value of $\phi_c$ and the one with the smallest difference is chosen.
+
+		Moving forward is trivial. Using basic trigonometry one can see that the following is true:
+
+		\begin{equation}
+			\begin{pmatrix}
+			x_{c+1} \\
+			y_{c+1}
+			\end{pmatrix}
+			=
+			\begin{pmatrix}
+			x_c \\
+			y_c
+			\end{pmatrix}
+			+ \mu
+			\begin{pmatrix}
+			\cos{\phi_c} \\
+			\sin{\phi_c}
+			\end{pmatrix}
+		\end{equation}
 
 \section{Results \& Analysis}
+	In order to test the various functions we use several images, shown in figure \ref{fig:ex_img}. Each of these images present their own challenges: \ref{fig:Example_curve_n0}, \ref{fig:Example_curve_n50} and \ref{fig:fingerprint5} all have quite wide ridges that plateau while \ref{fig:Example_curve_n50} and \ref{fig:arch} both have significant levels of noise that, if not properly dealt with, could easily lead to the ridge follower missing the true path of a ridge.
+
+			\begin{figure*}
+				\centering
+				\subfloat[Simple wide curve.]{\label{fig:Example_curve_n0}
+					\includegraphics[width = 0.45\textwidth]{../Images/Example_curve_n0}} \qquad
+				\subfloat[Simple wide curve with noise added.]{\label{fig:Example_curve_n50}
+					\includegraphics[width = 0.45\textwidth]{../Images/Example_curve_n50}} \\
+				\subfloat[Scan of a real fingerprint.]{\label{fig:arch}
+					\includegraphics[width = 0.45\textwidth]{../Images/arch}}
+\qquad
+				\subfloat[Computer generated fingerprint.]{\label{fig:fingerprint5}
+					\includegraphics[width = 0.45\textwidth]{../Images/fingerprint5}}
+				\caption{Example images used to test the functions written.}
+				\label{fig:ex_img}
+			\end{figure*}
+
+	\subsection{The PND function}
+			\begin{figure*}
+				\centering
+				\subfloat[Simple wide curve.]{\label{fig:PND_Example_curve_n0}
+					\includegraphics[width = 0.48\textwidth]{PND_Example_curve_n0}} \;
+				\subfloat[Simple wide curve with noise added.]{\label{fig:PND_Example_curve_n50}
+					\includegraphics[width = 0.48\textwidth]{PND_Example_curve_n50}} \\
+				\subfloat[Scan of a real fingerprint.]{\label{fig:PND_arch}
+					\includegraphics[width = 0.48\textwidth]{PND_arch}}
+\;
+				\subfloat[Computer generated fingerprint.]{\label{fig:PND_fingerprint5_small}
+					\includegraphics[width = 0.48\textwidth]{PND_fingerprint5_small}}
+				\caption{Sections of the example images after the PND function has been applied.}
+				\label{fig:PND_img}
+			\end{figure*}
+
+		As can be seen in figures \ref{fig:PND_Example_curve_n0} and \ref{fig:PND_fingerprint5_small} the PND function does correctly calculate surface normals for a noise free image. It should be noted that in the system developed here black represents a low pixel value while white is high (as is standard for greyscale images), hence the normals point towards the black regions rather than away.
+
+		If PND is applied to \ref{fig:Example_curve_n50} however, result is not as satisfactory (figure \ref{fig:PND_Example_curve_n50}). The point normals at the edge of the line do point towatds the line however as the PND function has no way of smothing out noise vectors scatter the image like mines in a playground\footnote{By which I mean that the mines are unwelcome and would mame children if not delt with}. In the case of scan of a real fingerprint the noise does not seam to have been an issue. Some normals are incorrectly angled but most are pointing in the right direction.
+
+		Overall it appears that on it's own the PND function can cope with some smudging and blured images as long as the ridges are still present but cannot cope with white noise, especally if the image has well sparsed ridges and large monochromatic areas.
+
+	\subsection{The ATD Function}
+			\begin{figure*}
+				\centering
+				\subfloat[Simple wide curve.]{\label{fig:ATD_Example_curve_n0_5}
+					\includegraphics[width = 0.48\textwidth]{ATD_Example_curve_n0_5}} \;
+				\subfloat[Simple wide curve with noise added.]{\label{fig:ATD_Example_curve_n50_5}
+					\includegraphics[width = 0.48\textwidth]{ATD_Example_curve_n50_5}} \\
+				\subfloat[Scan of a real fingerprint.]{\label{fig:ATD_arch_5}
+					\includegraphics[width = 0.48\textwidth]{ATD_arch_5}}
+\;
+				\subfloat[Computer generated fingerprint.]{\label{fig:ATD_fingerprint5_small_5}
+					\includegraphics[width = 0.48\textwidth]{ATD_fingerprint5_small_5}}
+				\caption{Sections of the example images after the ATD function has been applied with a window size of 5.}
+				\label{fig:ATD_img}
+			\end{figure*}
+
+		The results of the ATD function are not as encouraging as the PND results. Looking at figures \ref{fig:ATD_Example_curve_n0_5} and \ref{fig:ATD_fingerprint5_small_5} we can see that the function has spread the normals of the edges into regions that had no normal from the PND function (which is as expected) but most critically for certain sections the function calculates the direction of some of the vectors wrong. This appears to happen for sections that are nearly horizontal but is probably not due to the function incorrectly picking the case where $(u_1, u_2) = (0, 1)$, which can be seen the vectors pointing in opposing directions on opposite sides of the line. The bug may be due to a floating point error but at the time of writing the exact nature of the bug is unknown.
+
+		For white noise the ATD function does not appear to help. Both the random noise normals and the actual edge normals have been merged, though a line correctly oriented normals does remain (ignoring the sections where the above mentioned malfunction occurs). For the real fingerprint the ATD function does seam to have improved the situation, with the normals in the blurred sections becoming properly oriented. If a larger window is used on this image, figure \ref{fig:ATD_arch_15}, one can see the effect of over smoothing the normals --- in the sections that are blurred the over smoothing had set all normals to the same direction. Setting the ATD window too large also appears to eliminate some of the ridges which again isn't surprising.
+
+\begin{figurehere}
+\centering
+\includegraphics[width = 0.48\textwidth]{ATD_arch_15}
+\caption{The result of applying the ATD function to the real fingerprint with window size of 15.}
+\label{fig:ATD_arch_15}
+\end{figurehere}
+
+	\subsection{The Ridge Follower}
+			\begin{figure*}
+				\centering
+				\subfloat[Path of the ridge follower.]{\label{fig:RF_arch}
+					\includegraphics[width = 0.45\textwidth]{RF_arch}} \;
+				\subfloat[Normals generated by ATD function.]{\label{fig:RF_ATD_arch}
+					\includegraphics[width = 0.45\textwidth]{RF_ATD_arch}}
+				\caption{Result of applying the ridge follower to the output of the ATD function ($\mu = 2$, $\sigma = 2$, ATD window size set to 5).}
+				\label{fig:RF_img}
+			\end{figure*}
+
+		The results here are not encouraging - the ridge following algorithm, as implemented here, seams to switch between following a ridge and moving across ridges (figure \ref{fig:RF_arch}). This occurs independently of the previously mentioned bug in ATD (figure \ref{fig:RF_ATD_arch}). This problem may be down to how the function decides what the new value of $\phi_s$ is.
 
 \section{Conclusion}
-
+	A functioning system for computing the plane normal directions of a greyscale has been written and on testing was found to work well. This PND function has no way of dealing with noise hence a second function, the averaged tangent direction function, is necessary. On images with large uniform areas and white noise the ATD function is of little use however when tested with real fingerprints this is not a problem. It is found that when selecting the size of the window used by the ATD function it is important to not select a size that over smooths the normals.
 
 \printbibliography
 \end{multicols}
